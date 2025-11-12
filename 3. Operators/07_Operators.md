@@ -153,7 +153,3 @@ print(a + b)   # '+' is an operator → adds a and b
 | Bitwise           | Perform binary operations on numbers                       |
 +-------------------+------------------------------------------------------------+
 ```
-
----
-
-✨ *“Operators are the foundation of every expression in Python — master them early!”* 🚀
