@@ -348,39 +348,6 @@ for i in l1:
         new_list.append(i + j)
 # new_list contains combined strings
 ```
-
----
-
-## 18. Tips & Best Practices
-
-- Prefer meaningful variable names (`students`, `scores`) over `list` (which shadows builtin `list()`).
-- Use list comprehensions for concise and fast creation of new lists.
-- Use slicing `lst[:]` to make shallow copies; use `copy()` for clarity.
-- Avoid `eval(input())` for user input unless input is trusted.
-- When working with large lists, prefer built-in functions (`sum`, `min`, `max`, `sort`) for performance.
-- For nested mutable elements, remember `copy()` is shallow — use `deepcopy()` from `copy` module for full clones.
-
----
-
-## 19. Quick Reference Table
-
-| Operation | Method / Syntax |
-|-----------|------------------|
-| create empty list | `[]` |
-| append | `lst.append(x)` |
-| extend | `lst.extend(iterable)` |
-| insert | `lst.insert(index, x)` |
-| pop | `lst.pop()` / `lst.pop(index)` |
-| remove | `lst.remove(value)` |
-| index of value | `lst.index(value)` |
-| count occurrences | `lst.count(value)` |
-| length | `len(lst)` |
-| sort | `lst.sort()` |
-| reverse | `lst.reverse()` |
-| shallow copy | `lst.copy()` |
-| list comprehension | `[expr for item in iterable if condition]` |
-| enumerate | `for idx, val in enumerate(lst):` |
-
 ---
 
 # 🧩 Python `eval()` Function
