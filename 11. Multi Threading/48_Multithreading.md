@@ -1,4 +1,4 @@
-# ⚙️ Python Multithreading — Complete Notes
+# ⚙️ Python Multithreading
 
 ## 🧩 Process
 
