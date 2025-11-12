@@ -314,24 +314,5 @@ I help the teacher and students
 - `TeachingAssistant` inherits from both `Teacher` and `Student` → Multiple Inheritance.  
 - Together they form **Hybrid Inheritance**.
 
----
-
-## 🧩 Summary
-
-| Inheritance Type | Definition | Example | Key Feature |
-|------------------|-------------|----------|--------------|
-| **Multiple** | One class inherits from multiple classes | `class C(A, B)` | Uses MRO (left-to-right) |
-| **Hybrid** | Combination of multiple inheritance types | `class D(B, C)` | Complex but flexible |
-| **MRO** | Method Resolution Order | `ClassName.mro()` | Defines search order |
-| **super()** | Calls parent method/constructor | `super().__init__()` | Used for chaining |
-
----
-
-### ⚠️ Notes
-- Python resolves ambiguity using **C3 Linearization (MRO)**.
-- Avoid complex hybrid inheritance unless necessary — it can become hard to debug.
-- Always use `super()` in constructors for clean hierarchy calls.
-
----
 
 ✨ *“Inheritance isn’t just about reusing code — it’s about building logical relationships between real-world entities.”* 🧬🐍
