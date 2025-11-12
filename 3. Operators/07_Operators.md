@@ -100,16 +100,89 @@ print(a + b)   # '+' is an operator → adds a and b
 ---
 
 ## 🔹 Identity Operators
-```text
-+------------+------------------------------------+-------------+-----------+
-| Operator   | Description                        | Example     | Output    |
-+------------+------------------------------------+-------------+-----------+
-| is         | True if both refer to same object  | x is y      | True/False|
-| is not     | True if they are different objects | x is not y  | True/False|
-+------------+------------------------------------+-------------+-----------+
+
+Identity operators are used to **compare memory locations**, not just values.  
+They check whether two variables refer to the **same object** in memory (not whether their contents are equal).
+
+---
+
+### 📘 Example 1 — Using `is` and `is not`
+```python
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is not z)
+# returns False because z is the same object as x
+
+print(x is not y)
+# returns True because x is not the same object as y, even if they have the same content
+
+print(x != y)
+# demonstrates the difference between "is not" and "!=":
+# this comparison returns False because x and y have equal contents
 ```
 
 ---
+
+### 📘 Example 2 — Using `is` and `==`
+```python
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is z)
+# returns True because z is the same object as x
+
+print(x is y)
+# returns False because x and y are different objects in memory, even though they look identical
+
+print(x == y)
+# demonstrates the difference between "is" and "==":
+# returns True because x and y have equal content
+```
+
+---
+
+### 🧠 Explanation:
+```text
++-------------+------------------------------------------+----------------------------------------+
+| Operator    | Meaning                                 | Checks                                |
++-------------+------------------------------------------+----------------------------------------+
+| is          | True if both variables point to same     | Memory address (object identity)       |
+|             | object in memory                        |                                        |
+| is not      | True if both variables are NOT same      | Memory address (object identity)       |
+| ==          | True if both objects have same values    | Value/content equality                 |
+| !=          | True if both objects have different      | Value/content inequality               |
+|             | contents                                |                                        |
++-------------+------------------------------------------+----------------------------------------+
+```
+
+🧩 **Example Recap:**
+```text
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+```
+| Expression | Result | Reason |
+|-------------|---------|--------|
+| `x is z` | True | Both refer to the same object |
+| `x is y` | False | Different objects in memory |
+| `x == y` | True | Values (content) are equal |
+| `x is not y` | True | x and y are not same object |
+| `x != y` | False | Values are equal |
+
+---
+
+🧠 **Key Takeaways**
+- `is` and `is not` → Compare **object identity** (same memory reference).  
+- `==` and `!=` → Compare **object values** (same or different data).  
+- Two objects can look identical but still be stored separately in memory.  
+
+---
+
+✨ *“Always remember: ‘is’ checks identity, ‘==’ checks equality.”* 🧩
+
 
 ## 🔹 Membership Operators
 ```text
