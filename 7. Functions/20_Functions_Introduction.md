@@ -111,64 +111,70 @@ Even
 
 ---
 
-## 🧩 Using `eval()` in Functions
+# 🧩 Python `eval()` Function
 
-The `eval()` function is used to **evaluate** a string as a Python expression.  
-It’s often used in user input scenarios to allow dynamic evaluation.
-
-📘 **Syntax:**  
-```python
-eval(expression)
-```
-
-### Example 1: Using eval() with input
-```python
-num = eval(input("Enter a number: "))
-print(type(num))
-print(num + 5)
-```
-💡 If you enter `10` → it treats it as an integer  
-If you enter `10.5` → it becomes a float  
-If you enter `[1, 2, 3]` → it becomes a list  
+## 🔹 Definition
+`eval()` evaluates a string expression as Python code and returns the result.
+Syntax:
+    eval(expression, globals=None, locals=None)
 
 ---
 
-### Example 2: eval() inside a Function
-```python
-def add_numbers():
-    a = eval(input("Enter first number: "))
-    b = eval(input("Enter second number: "))
-    print("Sum is:", a + b)
-
-add_numbers()
-```
-
-✅ Output:
-```
-Enter first number: 10
-Enter second number: 20
-Sum is: 30
-```
+## 🔹 Purpose
+✅ Evaluate Python expressions dynamically  
+✅ Convert string input → actual data types  
+✅ Perform runtime computations  
 
 ---
 
-### ⚠️ Note:
-- Be cautious while using `eval()` with **untrusted input** — it can execute any Python code.
-- Prefer using `int()` / `float()` for safer numeric conversions when possible.
+## 🔹 Examples
+x = 5
+print(eval('x + 10'))          # 15
+print(eval('10 + 20 * 3'))     # 70
+print(eval('len([1,2,3])'))    # 3
 
 ---
 
-## 🧠 Summary Table
+## 🔹 With Input
+a = input("Enter: ")       # "[1,2,3]" → string
+b = eval(input("Enter: ")) # [1,2,3] → list
 
-| Concept | Description | Example |
-|----------|--------------|----------|
-| **Definition** | Reusable block of code | `def func():` |
-| **Advantages** | Reusability, Modularity | — |
-| **Built-in Functions** | Predefined in Python | `print()`, `len()`, `max()` |
-| **User-defined Functions** | Created by user | `def greet():` |
-| **Why Functions?** | Avoid code repetition | — |
-| **eval()** | Evaluates input dynamically | `eval(input())` |
+| Function | Output Type | Safe? |
+|-----------|--------------|-------|
+| input() | Always string | ✅ |
+| eval(input()) | Depends on input | ⚠️ Risky |
 
 ---
 
-✨ *“Functions help you write clean, reusable, and organized code — they’re the backbone of modular programming.”* 🧠🐍
+## 🔒 Security Warning
+⚠️ `eval()` executes arbitrary code — do not use with untrusted input.
+Example:
+    eval("__import__('os').system('rm -rf /')")  # 🚫 Dangerous!
+
+---
+
+## 🔹 Safe Alternative
+Use `ast.literal_eval()` for safe parsing of literals only.
+    import ast
+    data = ast.literal_eval(input("Enter: "))  # Safe
+    print(data, type(data))
+
+---
+
+## 🔹 Collections Examples
+
+| Type | Example Input | Output Type |
+|------|----------------|-------------|
+| List | [1,2,3] | <class 'list'> |
+| Tuple | (1,2,3) | <class 'tuple'> |
+| Set | {1,2,3} | <class 'set'> |
+| Dict | {'a':1, 'b':2} | <class 'dict'> |
+
+---
+
+## ✨ Key Takeaways
+- `eval()` executes a string as Python code  
+- Very powerful but unsafe if misused  
+- Prefer `ast.literal_eval()` for safe literal conversion  
+
+💡 "Use `eval()` wisely — dynamic, but dangerous!" 🐍
