@@ -333,20 +333,5 @@ value of smv is 50
 - Instance methods  
 - Constructors of the **parent class (`A`)**
 
----
-
-## 🧩 Summary
-
-| Concept | Description |
-|----------|--------------|
-| **IS-A Relationship** | A child class derives from a parent class |
-| **Keyword** | `class Child(Parent):` |
-| **Code Reusability** | Inherited methods and properties from parent |
-| **Example** | Employee IS-A Person |
-| **Types of Inheritance** | Single, Multiple, Multilevel, Hierarchical, Hybrid |
-| **Main Benefit** | Reduces redundancy and improves scalability |
-| **Main Risk** | Tight coupling between parent and child classes |
-
----
 
 ✨ *“Inheritance promotes reusability — you write once, and use everywhere.”* 🧬🐍
