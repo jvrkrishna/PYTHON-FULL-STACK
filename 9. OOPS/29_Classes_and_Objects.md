@@ -184,35 +184,4 @@ My name is Gopal
 My age is 30
 ```
 
----
-
-## 🔍 Understanding the `self` Keyword
-
-| Concept | Description |
-|----------|--------------|
-| **self** | Refers to the current instance (object) of the class |
-| **Usage** | Used to access variables and methods within the class |
-| **Note** | It must be the **first parameter** in every instance method definition |
-
----
-
-### 🧠 Example:
-```python
-class Demo:
-    def show(self):
-        print("Self refers to:", self)
-
-d = Demo()
-d.show()
-```
-
-🧾 **Output:**
-```
-Self refers to: <__main__.Demo object at 0x0000024B5D8A7E80>
-```
-
-This means `self` is pointing to the current object (`d` in this case).
-
----
-
 ✨ *“A class defines the idea, an object brings it to life — together they make Python truly object-oriented.”* 🧠🐍
