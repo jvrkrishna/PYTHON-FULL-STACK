@@ -383,7 +383,7 @@ for i in l1:
 
 ---
 
-# 🧩 Python `eval()` Function — Complete Notes (with Collections)
+# 🧩 Python `eval()` Function
 
 ---
 
@@ -650,46 +650,6 @@ Dict: {'a': 10, 'b': 20} | Type: <class 'dict'>
 | Tuple | `(10, 20, 30)` | `(10, 20, 30)` | `<class 'tuple'>` |
 | Set | `{10, 20, 30}` | `{10, 20, 30}` | `<class 'set'>` |
 | Dictionary | `{'a': 10, 'b': 20}` | `{'a': 10, 'b': 20}` | `<class 'dict'>` |
-
----
-
-## 🔹 Advantages of `eval()`
-
-✅ Converts input directly into Python objects  
-✅ Saves time when testing dynamic code  
-✅ Helpful for practicing data structures interactively  
-✅ Simplifies interactive console programs  
-
----
-
-## 🔹 Disadvantages / Risks
-
-⚠️ Executes arbitrary code (dangerous if input not trusted)  
-⚠️ Can modify files, delete data, or run harmful commands  
-⚠️ Slower than normal parsing  
-⚠️ Difficult to debug if misused  
-
----
-
-## 🔹 Safe Practices
-
-✅ Use `eval()` only on **trusted data**  
-✅ For untrusted input → use **`ast.literal_eval()`**  
-✅ Validate input before passing to `eval()`  
-✅ Always handle exceptions (`try-except`) when using it
-
----
-
-## 🔹 Summary Table
-
-| Feature | Description |
-|----------|-------------|
-| Function | Evaluates a string as Python code |
-| Common Use | Dynamic evaluation, parsing collections |
-| Return Type | Depends on input |
-| Security | Risky (executes arbitrary code) |
-| Safe Alternative | `ast.literal_eval()` |
-| Works With | list, tuple, set, dict, numbers, expressions |
 
 ---
 
