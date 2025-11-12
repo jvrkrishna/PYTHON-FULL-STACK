@@ -285,16 +285,6 @@ For repeated merging or updates, prefer `update()`.
 
 ---
 
-## 🔹 Notes & Best Practices
-
-- **Do not name variables `dict`, `list`, `set`, `str`, etc.** — it shadows built-in constructors.  
-- Use `get()` when a key might be missing to avoid `KeyError`.  
-- Beware of mutable default values (e.g., `fromkeys` with a list).  
-- For deep copies of nested dicts use `copy.deepcopy()` from the `copy` module.  
-- Use dictionary comprehensions for concise creation.
-
----
-
 ## 🔹 Quick Reference Table
 
 | Operation | Example |
