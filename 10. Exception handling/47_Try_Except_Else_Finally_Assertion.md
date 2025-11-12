@@ -302,32 +302,6 @@ def read_and_divide(path, divisor):
 # read_and_divide("abc.txt", 0)
 # read_and_divide("abc.txt", 2)
 
-
-# ------------------------------------------------------------
-# 🧩 Summary Table
-# ------------------------------------------------------------
-'''
-| Block     | Purpose                | When it Runs                        |
-|------------|------------------------|-------------------------------------|
-| try        | Write risky code       | Always first                        |
-| except     | Handle errors          | Only if error occurs                |
-| else       | Executes if no error   | After successful try                |
-| finally    | Cleanup code           | Always (except forced exit)         |
-| assert     | Debug condition check  | Raises AssertionError if false      |
-'''
-
-# ------------------------------------------------------------
-# 🧩 Best Practices
-# ------------------------------------------------------------
-'''
-✅ Keep try blocks short and specific.
-✅ Always catch specific exceptions (not just "Exception").
-✅ Use finally for cleanup operations.
-✅ Use else for success logic.
-✅ Use assert only for debugging, not input validation.
-✅ Don’t leave empty except blocks.
-'''
-
 # ------------------------------------------------------------
 # 🧩 Conclusion
 # ------------------------------------------------------------
