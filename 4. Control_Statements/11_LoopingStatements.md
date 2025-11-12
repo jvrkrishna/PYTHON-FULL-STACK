@@ -424,20 +424,6 @@ else:
     print("Loop finished successfully")
 ```
 
----
-
-## 🔹 Practice Tasks
-```text
-1️⃣ Print even numbers between 1–50 using while.
-2️⃣ Reverse a string using for loop (no slicing).
-3️⃣ Count positive, negative, and zero inputs until -1 entered.
-4️⃣ Print multiplication tables from 1–5 using nested for loops.
-5️⃣ Display a triangle of numbers using nested loops.
-6️⃣ Use break and continue in a menu-driven program.
-```
-
----
-
 ## 🔹 Summary
 ```text
 +------------------+-----------------------------------------------+
