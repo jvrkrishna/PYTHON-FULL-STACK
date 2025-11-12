@@ -257,19 +257,5 @@ Bike is a two-wheeler
 | **Multilevel Inheritance** | A → B → C | `class C(B)` | C can access A and B |
 | **Hierarchical Inheritance** | A → (B, C) | `class B(A)` & `class C(A)` | Both B and C can access A independently |
 
----
-
-## 🧩 Summary
-
-| Concept | Description |
-|----------|--------------|
-| **Multilevel Inheritance** | Chain of inheritance — derived from another derived class |
-| **Hierarchical Inheritance** | Multiple classes derived from a single parent |
-| **Main Benefit** | Code reusability and organization |
-| **Keyword** | `class Child(Parent):` |
-| **Example** | `class C(B)` → `class B(A)` |
-| **Common in Real-World** | Organizational hierarchies, family trees, product models |
-
----
 
 ✨ *“Inheritance forms the backbone of OOP — it connects classes like generations in a family tree.”* 🧬🐍
