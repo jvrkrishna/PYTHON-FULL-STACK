@@ -368,17 +368,4 @@ and `x()` executes that inner function.
 
 ---
 
-## 🧠 Summary Table
-
-| Concept | Description | Example |
-|----------|--------------|----------|
-| **Positional Arguments** | Must be passed in correct order | `func(10, 20)` |
-| **Keyword Arguments** | Uses key=value | `func(a=10, b=20)` |
-| **Default Arguments** | Predefined value | `func(a, b=30)` |
-| **Variable-length** | `*args`, `**kwargs` | `func(*nums)` |
-| **Global** | Variable accessible everywhere | `global x` |
-| **Nested Function** | Function inside another | `def outer(): def inner():` |
-
----
-
 ✨ *“Mastering arguments and scopes gives you total control over how data flows through your functions.”* 🧠🐍
