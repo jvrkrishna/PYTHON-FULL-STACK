@@ -192,16 +192,4 @@ Engine with 400 HP started
 
 ---
 
-## 🧠 Summary
-
-| Concept | Description |
-|----------|--------------|
-| **Composition (HAS-A)** | One class contains another class’s object |
-| **Advantage** | Code reuse, modular structure |
-| **Dependency** | Inner class depends on outer class |
-| **Example** | `Person HAS-A Laptop` |
-| **Used For** | Combining smaller objects to build complex systems |
-
----
-
 ✨ *“Composition (HAS-A) builds classes like building blocks — small, reusable, and interconnected.”* 🧱🐍
