@@ -24,6 +24,21 @@ L4 = list(range(0, 11))  # [0,1,2,...,10]
 # List can hold complex types
 L5 = [40, {"name": "Ram"}, list((10, 20, 30))]
 ```
+
+### 🔹 List Creation Dynamically (using `eval()`)
+
+```python
+T6 = eval(input("Enter tuple elements: "))  # Example: [10, 20, 30]
+print(type(T6))
+print(T6)
+```
+
+🧠 **Output:**
+```
+Enter tuple elements: [10, 20, 30]
+<class 'list'>
+[10, 20, 30]
+```
 ---
 
 ## 2. Accessing Elements & Slicing
