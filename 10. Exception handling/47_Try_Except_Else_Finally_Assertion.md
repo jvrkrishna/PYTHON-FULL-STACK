@@ -1,4 +1,4 @@
-# ⚙️ Python Exception Handling — Complete Notes
+# ⚙️ Python Exception Handling
 
 '''
 In Python, errors can occur for many reasons such as wrong syntax, invalid operations, or unexpected user input.
