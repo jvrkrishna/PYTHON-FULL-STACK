@@ -124,18 +124,110 @@ print(a + b)   # '+' is an operator → adds a and b
 ---
 
 ## 🔹 Bitwise Operators
-```text
-+------------+------------------------------+-------------+----------+
-| Operator   | Description                  | Example     | Output   |
-+------------+------------------------------+-------------+----------+
-| &          | Bitwise AND                  | 5 & 3       | 1        |
-| |          | Bitwise OR                   | 5 | 3       | 7        |
-| ^          | Bitwise XOR                  | 5 ^ 3       | 6        |
-| ~          | Bitwise NOT                  | ~5          | -6       |
-| <<         | Left shift                   | 5 << 1      | 10       |
-| >>         | Right shift                  | 5 >> 1      | 2        |
-+------------+------------------------------+-------------+----------+
+
+Bitwise operators work at the **binary level**.  
+They treat numbers as a sequence of bits (0s and 1s) and perform logical operations directly on each bit position.
+
+---
+
+### 📘 Bitwise Example 1
+```python
+a = 10    # 1010
+b = 7     # 0111
+
+print(a & b)   # Bitwise AND
+print(a | b)   # Bitwise OR
+print(a ^ b)   # Bitwise XOR
 ```
+
+```text
++----------+--------+-----------------------------------------+
+| Operation | Binary | Explanation                             |
++-----------+--------+-----------------------------------------+
+| a         | 1010   | (10 in binary)                          |
+| b         | 0111   | (7  in binary)                          |
+| a & b     | 0010   | Both bits 1 → 1, else 0 → 2             |
+| a | b     | 1111   | Any bit 1 → 1 → 15                      |
+| a ^ b     | 1101   | Different bits → 1, same bits → 0 → 13  |
++-----------+--------+-----------------------------------------+
+```
+
+🧠 **Explanation:**
+- `&` → AND → 1 only if both bits are 1  
+- `|` → OR  → 1 if any bit is 1  
+- `^` → XOR → 1 if bits are different (0 if same)
+
+---
+
+### 📘 Bitwise Example 2 — Bitwise NOT (~)
+The **bitwise NOT (~)** operator inverts all bits (0 → 1 and 1 → 0)  
+But Python stores integers in **2’s complement** format, so `~x` equals `-(x+1)`.
+
+---
+
+#### 🔹 Example 2.1 — Using `a = 13`
+```python
+a = 13
+print(~a)
+```
+
+Binary breakdown:
+```text
+ a  =  13  →  0|1101
+~a  =  invert bits → 1|0010
+       add 1 → 1|1110
+Result → -14
+```
+
+🧠 **Explanation:**
+- `~13 = -(13 + 1)` → `-14`  
+- The `1|` at left denotes sign bit (1 = negative).
+
+---
+
+#### 🔹 Example 2.2 — Using `x = 10`
+```python
+x = 10
+print(~x)
+```
+
+Binary breakdown:
+```text
+ x  =  10  →  0|1010
+~x  =  invert bits → 1|0101
+       add 1 → 1|1011
+Result → -11
+```
+
+🧠 **Explanation:**
+- `~10 = -(10 + 1)` → `-11`
+- So the **NOT** operator always returns **negative of (n + 1)**.
+
+---
+
+### 📘 Bitwise Summary
+```text
++------------+----------------------------------+---------------------------------+
+| Operator   | Meaning                          | Example & Result                |
++------------+----------------------------------+---------------------------------+
+| &          | AND (both 1 → 1)                 | 10 & 7  → 2                     |
+| |          | OR (any 1 → 1)                   | 10 | 7  → 15                    |
+| ^          | XOR (same → 0, diff → 1)         | 10 ^ 7  → 13                    |
+| ~          | NOT (invert bits, → -(x+1))      | ~10 → -11                       |
+| <<         | Left shift (×2 per shift)        | 5 << 1 → 10                     |
+| >>         | Right shift (÷2 per shift)       | 5 >> 1 → 2                      |
++------------+----------------------------------+---------------------------------+
+```
+
+---
+
+🧠 **Quick Concept Recap**
+- `&` — Logical AND of bits  
+- `|` — Logical OR of bits  
+- `^` — Logical XOR (1 if different)  
+- `~` — Bitwise NOT → negate all bits (`~x = -(x + 1)`)  
+- `<<` — Left shift (multiply by 2)  
+- `>>` — Right shift (divide by 2)
 
 ---
 
