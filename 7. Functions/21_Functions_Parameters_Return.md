@@ -226,18 +226,4 @@ print(x, y, z)
 
 ---
 
-## 🧠 Summary Table
-
-| Concept | Description | Example |
-|----------|--------------|----------|
-| **Parameter** | Variable inside function | `def add(a, b):` |
-| **Argument** | Value passed during call | `add(10, 20)` |
-| **Call by Value** | Works for immutable objects | `int`, `str`, `tuple` |
-| **Call by Reference** | Works for mutable objects | `list`, `dict`, `set` |
-| **return** | Sends data back to caller | `return x + y` |
-| **print()** | Displays output on screen | `print("Hello")` |
-| **Multiple return** | Return multiple values | `return a, b, c` |
-
----
-
 ✨ *“Functions not only organize your logic — they control how data flows in and out of your program.”* 🧠🐍
