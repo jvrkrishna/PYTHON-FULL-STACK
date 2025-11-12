@@ -24,9 +24,6 @@ L4 = list(range(0, 11))  # [0,1,2,...,10]
 # List can hold complex types
 L5 = [40, {"name": "Ram"}, list((10, 20, 30))]
 ```
-
-**Note:** Be careful with `eval(input(...))` — it requires proper brackets and can be unsafe for untrusted input. Prefer parsing `input()` safely or using `json.loads()` for structured input.
-
 ---
 
 ## 2. Accessing Elements & Slicing
