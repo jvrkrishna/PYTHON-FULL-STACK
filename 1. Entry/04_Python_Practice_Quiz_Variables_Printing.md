@@ -2,8 +2,6 @@
 
 ## 🧩 PART 1: PRACTICE TASKS
 
-### 🔹 Level 1 — Basic
-
 1. Write a Python program to print:
 Hello, welcome to Python!
 
@@ -23,7 +21,6 @@ using the `.format()` method.
 Course: Python Full Stack | Price: $25.5
 using an **f-string**.
 
-### 🔹 Level 2 — Intermediate Formatting
 8. Use `%` formatting to print:
 My name is Ramesh and my score is 95
 
@@ -62,8 +59,6 @@ My name is Ramesh and my score is 95
  Hello <name>, you are <age> years old!
  ```
  (Use f-strings)
-
-### 🔹 Level 3 — Debug & Thinking
 
 13. Predict the output:
  ```python

@@ -13,6 +13,6 @@ also known as block comments'''
 
 🧠 Output:
 Hello World
-Hi, this is Rama Krishna
+Hi, this is Hari
 10
 
