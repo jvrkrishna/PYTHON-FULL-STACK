@@ -57,25 +57,161 @@ It supports multiple paradigms: procedural, object-oriented, and functional prog
 
 # 3. Variables & Datatypes
 
-### What is a Variable?
-A variable is a name that stores data in memory.
+# 🧠 Python Variables & Datatypes — Detailed Notes
 
-### Basic Datatypes
-- `int`  
-- `float`  
-- `str`  
-- `bool`  
-- `list`  
-- `tuple`  
-- `set`  
-- `dict`  
+## 📌 What is a Variable?
+A **variable** is a name given to a memory location where data is stored temporarily.  
+It acts like a container that holds information which can be changed during program execution.
 
-### Example
+### ✔ Key Points
+- You don't need to declare the datatype — Python detects it automatically.
+- A variable is created when value is assigned.
+- Variable names are case-sensitive (`Name` and `name` are different).
+
+### ✔ Rules for Naming Variables
+- Must start with a letter or underscore (`_name`, `name`, `Name` ✓)
+- Cannot start with a number (`1name` ✗)
+- Cannot use special characters (`name@`, `%age` ✗)
+- Cannot use keywords (`class`, `for`, `while` ✗)
+
+---
+
+# 🧩 Basic Datatypes in Python
+
+Python supports many built-in datatypes, but these are the most commonly used:
+
+## 1️⃣ **int**  
+Stores whole numbers (positive or negative).
+
+```python
+age = 21
+marks = -50
+```
+
+## 2️⃣ **float**  
+Stores decimal numbers.
+
+```python
+price = 99.50
+pi = 3.14159
+```
+
+## 3️⃣ **str** (String)  
+Stores text inside quotes (single `' '` or double `" "`).
+
+```python
+name = "Rahul"
+msg = 'Hello Python'
+```
+
+## 4️⃣ **bool**  
+Boolean values → `True` or `False`
+
+```python
+is_active = True
+is_student = False
+```
+
+---
+
+# 🔢 Collection Datatypes
+
+## 5️⃣ **list** (Mutable)
+A list can store multiple values, and the values can be changed later.
+
+```python
+fruits = ["apple", "banana", "mango"]
+fruits[1] = "orange"   # list is changeable
+```
+
+## 6️⃣ **tuple** (Immutable)
+Values cannot be changed once created.
+
+```python
+colors = ("red", "green", "blue")
+```
+
+## 7️⃣ **set** (Unique & Unordered)
+Automatically removes duplicate values.
+
+```python
+numbers = {1, 2, 3, 3, 2}   # duplicates removed → {1,2,3}
+```
+
+## 8️⃣ **dict** (Key-Value Pairs)
+Like a mini-database that stores data in pairs.
+
+```python
+student = { "name": "Ravi", "age": 20, "city": "Hyderabad" }
+```
+
+---
+
+# 🧪 Checking the Datatype
+Use the built-in `type()` function:
+
+```python
+x = 10
+print(type(x))   # <class 'int'>
+```
+
+---
+
+# 📘 Example Program Using Multiple Datatypes
+
 ```python
 name = input("Enter Name: ")
 age = int(input("Enter Age: "))
-print(f"Hello {name}, you are {age} years old.")
+
+details = {
+    "name": name,
+    "age": age,
+    "is_adult": age >= 18
+}
+
+print(f"Hello {details['name']}, you are {details['age']} years old.")
+print("Adult:", details["is_adult"])
 ```
+
+---
+
+# 🔥 Additional Examples
+
+### 📝 Variable Reassignment
+Variables can change datatype:
+
+```python
+x = 10
+x = "Python"   # valid, but not recommended
+```
+
+### 📝 Multiple Assignments
+```python
+a, b, c = 10, 20, 30
+```
+
+### 📝 Assigning Same Value to Multiple Variables
+```python
+x = y = z = 5
+```
+
+---
+
+# 🎯 Summary
+| Datatype | Description | Mutable? | Example |
+|---------|-------------|----------|---------|
+| int | Whole numbers | No | 10 |
+| float | Decimal numbers | No | 10.5 |
+| str | Text data | No | "Hello" |
+| bool | True/False | No | True |
+| list | Ordered & changeable | Yes | [10,20,30] |
+| tuple | Ordered & unchangeable | No | (10,20,30) |
+| set | Unique values | Yes | {10,20,30} |
+| dict | Key-value pairs | Yes | {"name":"Ram"} |
+
+---
+
+If you want more detailed explanations on **operators**, **conditions**, or **functions**, tell me — I can prepare them in the same style. 😊📘
 
 ---
 
