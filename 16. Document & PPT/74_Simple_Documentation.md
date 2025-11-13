@@ -1,468 +1,433 @@
-==========================================
-📑 INDEX
-==========================================
-
-Introduction to Python
-
-Features of Python
-
-Variables & Datatypes
-
-Operators in Python
-
-Conditional Statements
-
-Looping Statements
-
-Functions (POP & OOP)
-
-Collections (List, Tuple, Set, Dict)
-
-eval() Function
-
-OOP Concepts
-
-Types of Inheritance
-
-super() Function
-
-Method & Constructor Overriding
-
-Operator Overloading
-
-Abstract Class & Interface
-
-Access Modifiers
-
-Encapsulation
-
-Exception Handling
-
-Finally & Else blocks
-
-Assertions
-
-File Handling
-
-Multithreading
-
-Important Python Programs (POP + OOP)
-
-Pattern Printing Logic
-
-JSON — Why It Is Used
-
-Special Tasks
-
-Games (Math Game, Sum Game, Number Guess, OTP, Password Generator)
-
-Bank Management System Project (with explanation)
-
-Conclusion
-
-==========================================
-1️⃣ INTRODUCTION TO PYTHON
-==========================================
-🔹 Definition
-
-Python is a high-level, interpreted, object-oriented programming language known for its simple syntax and readability.
-
-🔹 Why Python?
-
-Beginner-friendly
-
-Large community
-
-Used in AI, ML, web development, automation, cybersecurity
-
-Huge library support (Django, NumPy, Pandas etc.)
-
-==========================================
-2️⃣ FEATURES OF PYTHON
-==========================================
-
-Interpreted
-
-Dynamically typed
-
-Object-oriented
-
-Platform-independent
-
-Rich standard libraries
-
-Easy integration with other languages
-
-==========================================
-3️⃣ VARIABLES & DATATYPES
-==========================================
-🔹 Variable Definition
-
-A variable is a container used to store data values.
-
-🔹 Input/Output
-name = input("Enter name: ")
-age = int(input("Enter age: "))
-print(f"Hi {name}, your age is {age}")
-
-🔹 Datatypes
-
-int
-
-float
-
-str
-
-bool
-
-list
-
-tuple
-
-set
-
-dict
-
-==========================================
-4️⃣ OPERATORS
-==========================================
-🔹 Definition
-
-Operators are special symbols used to perform operations on variables & values.
-
-Types:
-
-Arithmetic
-
-Logical
-
-Relational
-
-Assignment
-
-Bitwise
-
-Identity
-
-Membership
-
-==========================================
-5️⃣ CONDITIONAL STATEMENTS
-==========================================
-🔹 Definition
-
-Conditional statements are used to make decisions using if, elif, else.
-
+# 📑 INDEX
+
+1. Introduction to Python  
+2. Features of Python  
+3. Variables & Datatypes  
+4. Operators in Python  
+5. Conditional Statements  
+6. Looping Statements  
+7. Functions (POP & OOP)  
+8. Collections (List, Tuple, Set, Dict)  
+9. eval() Function  
+10. Object Oriented Programming (OOP) Concepts  
+11. Types of Inheritance  
+12. super() Function  
+13. Method & Constructor Overriding  
+14. Operator Overloading  
+15. Abstract Class & Interface  
+16. Access Modifiers & Name Mangling  
+17. Encapsulation  
+18. Exception Handling, Finally & Else, Assertions  
+19. File Handling  
+20. Multithreading  
+21. Important Python Programs  
+22. Pattern Printing Logic  
+23. JSON — Why It Is Used  
+24. Special Tasks & Input Tricks  
+25. Games & Random Module Tasks  
+26. Bank Management System Project  
+27. Conclusion  
+
+---
+
+# 1. Introduction to Python
+
+Python is a **high-level**, **interpreted**, **object-oriented** programming language known for its clean and readable syntax.  
+It supports multiple paradigms: procedural, object-oriented, and functional programming.
+
+### Why Python?
+- Simple and beginner-friendly  
+- Vast library support  
+- Used in AI, ML, Web development, Automation  
+- Platform independent  
+- Free and open source  
+
+---
+
+# 2. Features of Python
+
+- **Interpreted** – executed line by line  
+- **Dynamically Typed** – types decided at runtime  
+- **Portable** – runs on Windows, Linux, macOS  
+- **Extensive Libraries** – numpy, pandas, django  
+- **Object-Oriented**  
+- **Large Community Support**  
+
+---
+
+# 3. Variables & Datatypes
+
+### What is a Variable?
+A variable is a name that stores data in memory.
+
+### Basic Datatypes
+- `int`  
+- `float`  
+- `str`  
+- `bool`  
+- `list`  
+- `tuple`  
+- `set`  
+- `dict`  
+
+### Example
+```python
+name = input("Enter Name: ")
+age = int(input("Enter Age: "))
+print(f"Hello {name}, you are {age} years old.")
+```
+
+---
+
+# 4. Operators in Python
+
+### Types of Operators:
+- Arithmetic → +, -, *, /, //, %, **  
+- Relational → <, >, ==, !=, <=  
+- Logical → and, or, not  
+- Assignment → +=, -=  
+- Bitwise → &, |, ^  
+- Identity → is, is not  
+- Membership → in, not in  
+
+---
+
+# 5. Conditional Statements
+
+Used to make decisions.
+
+```python
 if condition:
-    statements
+    statement
+elif condition:
+    statement
 else:
-    statements
+    statement
+```
 
-==========================================
-6️⃣ LOOPING STATEMENTS
-==========================================
-🔹 For Loop
-for i in range(5):
+---
+
+# 6. Looping Statements
+
+### For Loop  
+```python
+for i in range(1,6):
     print(i)
+```
 
-🔹 While Loop
-while a < 5:
-    print(a)
-    a += 1
+### While Loop  
+```python
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+```
 
-==========================================
-7️⃣ FUNCTIONS
-==========================================
-🔹 Definition
+---
 
-A function is a block of code used to perform a specific task.
+# 7. Functions (POP & OOP)
 
-✔ POP Method
+### POP Style Function  
+```python
 def add(a, b):
     return a + b
+```
 
-✔ OOP Method
+### OOP Style Function  
+```python
 class Calc:
     def add(self, a, b):
         return a + b
+```
 
-==========================================
-8️⃣ COLLECTIONS
-==========================================
-🔹 List — Mutable
-🔹 Tuple — Immutable
-🔹 Set — Unique values
-🔹 Dictionary — Key-value
-==========================================
-9️⃣ eval() FUNCTION
-==========================================
-🔹 Definition
+---
 
-eval() converts a string into a Python object.
+# 8. Collections
 
-Examples:
+### List (Mutable)
+```python
+l = [1,2,3]
+```
+
+### Tuple (Immutable)
+```python
+t = (1,2,3)
+```
+
+### Set (Unique values)
+```python
+s = {1,2,3}
+```
+
+### Dictionary (Key-value)
+```python
+d = {"name":"Raj", "age":20}
+```
+
+---
+
+# 9. eval() Function
+
+Converts string to python object.
+
+```python
+x = eval("10 + 20")
 l = eval("[1,2,3]")
-d = eval("{'a':10}")
+```
 
-==========================================
-🔟 OBJECT ORIENTED PROGRAMMING
-==========================================
-🔹 Contains:
+---
 
-Class
+# 10. OOP Concepts
 
-Object
+- Class  
+- Object  
+- Constructor  
+- Inheritance  
+- Polymorphism  
+- Abstraction  
+- Encapsulation  
 
-Method
+---
 
-Constructor
+# 11. Types of Inheritance
 
-Inheritance
+1. Single  
+2. Multiple  
+3. Multilevel  
+4. Hierarchical  
+5. Hybrid  
 
-Polymorphism
+---
 
-Abstraction
+# 12. super() Function
 
-Encapsulation
+Used to call parent class method.
 
-==========================================
-1️⃣1️⃣ INHERITANCE
-==========================================
-🔹 Definition
+```python
+class A:
+    def show(self):
+        print("Parent")
 
-Inheritance allows one class to acquire properties of another class.
+class B(A):
+    def show(self):
+        super().show()
+        print("Child")
+```
 
-Types:
+---
 
-Single
+# 13. Method & Constructor Overriding
 
-Multiple
+### Method Overriding
+```python
+class A:
+    def show(self):
+        print("A")
 
-Multilevel
+class B(A):
+    def show(self):
+        print("B")
+```
 
-Hierarchical
+---
 
-Hybrid
+# 14. Operator Overloading
+```python
+class A:
+    def __init__(self,x):
+        self.x=x
+    def __add__(self, other):
+        return self.x + other.x
+```
 
-(All examples already provided in earlier notes)
+---
 
-==========================================
-1️⃣2️⃣ SUPER() FUNCTION
-==========================================
-🔹 Definition
+# 15. Abstract Class & Interface
 
-Used to call parent class methods from child class.
+```python
+from abc import ABC, abstractmethod
 
-==========================================
-1️⃣3️⃣ METHOD & CONSTRUCTOR OVERRIDING
-==========================================
-🔹 Definition
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+```
 
-When a child class provides its own version of a parent method.
+---
 
-==========================================
-1️⃣4️⃣ OPERATOR OVERLOADING
-==========================================
-Example:
-def __add__(self, other):
-    return self.x + other.x
+# 16. Access Modifiers
 
-==========================================
-1️⃣5️⃣ ABSTRACT CLASS & INTERFACE
-==========================================
-🔹 Abstract Class
+- Public → `x`  
+- Protected → `_x`  
+- Private → `__x`  
 
-A class with one or more abstract methods.
+---
 
-🔹 Interface
+# 17. Encapsulation
 
-A class containing only abstract methods.
+Binding data + methods and restricting direct access.
 
-==========================================
-1️⃣6️⃣ ACCESS MODIFIERS
-==========================================
+---
 
-Public → x
+# 18. Exception Handling, Finally & Else, Assertions
 
-Protected → _x
-
-Private → __x
-
-==========================================
-1️⃣7️⃣ ENCAPSULATION
-==========================================
-Definition
-
-Binding data and functions together and restricting direct access.
-
-==========================================
-1️⃣8️⃣ EXCEPTION HANDLING
-==========================================
+```python
 try:
-    a = 10 / 0
+    a = 10/0
 except ZeroDivisionError:
-    print("Error")
+    print("Cannot divide")
+else:
+    print("No error")
+finally:
+    print("Always executed")
+```
 
-==========================================
-1️⃣9️⃣ FINALLY & ELSE BLOCKS
-==========================================
+### Assertion  
+```python
+assert age >= 18, "Age must be above 18"
+```
 
-else → executes when no exception
+---
 
-finally → executes always
+# 19. File Handling
 
-==========================================
-2️⃣0️⃣ ASSERTIONS
-==========================================
-assert age >= 18, "Age restriction"
-
-==========================================
-2️⃣1️⃣ FILE HANDLING
-==========================================
-🔹 Reading
-with open("a.txt", "r") as f:
-    print(f.read())
-
-🔹 Writing
-with open("a.txt", "w") as f:
+### Write File
+```python
+with open("data.txt","w") as f:
     f.write("Hello")
+```
 
-==========================================
-2️⃣2️⃣ MULTITHREADING
-==========================================
+### Read File
+```python
+with open("data.txt","r") as f:
+    print(f.read())
+```
+
+---
+
+# 20. Multithreading
+
+```python
 from threading import Thread
 
-def hello(): print("Hi")
+def show():
+    print("Hello")
 
-t = Thread(target=hello)
+t = Thread(target=show)
 t.start()
+```
 
-==========================================
-2️⃣3️⃣ IMPORTANT PROGRAMS (POP + OOP)
-==========================================
-🔹 Even or Odd
-🔹 Prime Number
-🔹 Armstrong
-🔹 Strong Number
-🔹 Palindrome
-🔹 Digit Count
-🔹 Reverse Number
-🔹 Calculator
-🔹 Sum of Digits
+---
 
-(All codes included earlier)
+# 21. Important Python Programs
 
-==========================================
-2️⃣4️⃣ PATTERN PRINTING LOGIC
-==========================================
+- Even / Odd  
+- Prime Number  
+- Armstrong  
+- Strong Number  
+- Palindrome  
+- Reverse Number  
+- Count Digits  
+- Factorial  
+- Sum of Digits  
 
-Covers:
+All versions using POP + OOP can be included.
 
-Square
+---
 
-Triangle
+# 22. Pattern Printing Logic
 
-Pyramid
+### Square Pattern
+```python
+for i in range(5):
+    print("* "*5)
+```
 
-Hill
+### Pyramid
+```python
+for i in range(5):
+    print(" "*(5-i)+"*"*(2*i+1))
+```
 
-Reverse Hill
+### Diamond, Hill, Reverse Hill, X-pattern, Zero-pattern  
+(All included in previous notes.)
 
-Diamond
+---
 
-X Pattern
+# 23. JSON — Why It Is Used
 
-Zero Pattern
+### JSON = JavaScript Object Notation  
 
-(All examples included earlier)
+### Used For:
+- API communication  
+- Configuration files  
+- Lightweight data transfer  
+- Human-readable format  
 
-==========================================
-2️⃣5️⃣ WHY JSON IS USED
-==========================================
-🔹 Definition
+---
 
-JSON (JavaScript Object Notation) is a lightweight data format used for storing and exchanging data.
+# 24. Special Tasks & Input Tricks
 
-🔹 Why it is used
+### Multiple Inputs
+```python
+name, place = input("Enter name, place: ").split(",")
+```
 
-API communication
+### Unlimited Inputs
+```python
+lst = [i for i in input().split()]
+```
 
-Storing configuration
+### Convert All Inputs to int
+```python
+data = list(map(int, input().split()))
+```
 
-Lightweight alternative to database
+---
 
-Easy to read and write
+# 25. Games & Random Module Tasks
 
-==========================================
-2️⃣6️⃣ SPECIAL TASKS
-==========================================
+### Number Guess Game  
+### Sum Game  
+### Math Game  
+### OTP Generator  
+### Strong Password Generator  
 
-✔ Multiple inputs
-✔ Unlimited inputs
-✔ Mapping inputs
-✔ Type conversion
+Using:  
+```python
+from random import randint
+```
 
-(All code included earlier)
+---
 
-==========================================
-2️⃣7️⃣ GAMES & RANDOM MODULE TASKS
-==========================================
+# 26. Bank Management System Project (Final)
 
-✔ Sum Game
-✔ Math Game
-✔ OTP Generator
-✔ Strong Password Generator
-✔ Number Guess Game
-
-==========================================
-2️⃣8️⃣ ⭐ BANK MANAGEMENT SYSTEM PROJECT
-==========================================
-📌 Definition
-
-A Python console-based banking system that allows user login, deposit, withdraw, and track transactions.
-
-📌 Features
-
-Password validation
-
-3 attempt limit
-
-Deposit
-
-Withdraw
-
-Balance viewing
-
-Loop menu
-
-Auto exit
-
-📌 FINAL PROJECT CODE
+```python
 balance = 1000
 count = 0
 
 def Bank():
-    password = int(input("Please enter the password to Login: "))
+    password = int(input("Enter password: "))
     key = 2024
 
     global count
     if password == key:
-        print("Login Successful...")
+        print("Login Successful")
     else:
-        print("Incorrect Password!")
+        print("Incorrect Password")
         count += 1
         if count == 3:
-            print("Account Locked for 24 hours!")
-            exit(0)
+            print("Account locked")
+            exit()
         return Bank()
 
-    print("Welcome to the Bank")
-    name = input("Enter your Name: ")
-    print(f"Hi {name}, your current balance is {balance}")
+    print("Welcome to Python Bank")
+    name = input("Enter Name: ")
+    print(f"Hello {name}, Current Balance = {balance}")
     ask()
 
 def ask():
-    choice = int(input("Press 1 for Deposit, Press 2 for Withdraw: "))
+    choice = int(input("1) Deposit  2) Withdraw : "))
     if choice == 1:
         Deposit()
     elif choice == 2:
@@ -471,26 +436,37 @@ def ask():
 
 def Deposit():
     global balance
-    amount = int(input("Enter deposit amount: "))
-    balance += amount
-    print("Amount Deposited Successfully!")
-    print("Current Balance:", balance)
+    amt = int(input("Enter amount: "))
+    balance += amt
+    print("Amount Deposited Successfully")
 
 def Withdraw():
     global balance
-    amount = int(input("Enter withdraw amount: "))
-    if amount <= balance:
-        balance -= amount
-        print("Withdraw Successful!")
+    amt = int(input("Enter amount: "))
+    if amt <= balance:
+        balance -= amt
+        print("Withdraw Successful")
     else:
         print("Insufficient Balance")
-    print("Current Balance:", balance)
 
 def extend():
-    option = input("Do you want to continue? (y/n): ")
-    if option.lower() == 'y':
+    op = input("Continue? (y/n): ")
+    if op.lower() == 'y':
         ask()
     else:
-        exit(0)
+        exit()
 
 Bank()
+```
+
+---
+
+# 27. Conclusion
+
+Python is one of the most powerful and widely used languages today.  
+It is easy to learn, flexible, and suitable for almost every domain including AI, ML, Web Development, Automation, and Cybersecurity.  
+Completing this documentation builds strong foundations for real-world development and projects.
+
+---
+
+# END OF DOCUMENT
