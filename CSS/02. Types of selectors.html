@@ -1,0 +1,115 @@
+<!--There are four types of selectors-->
+<!--Element Selector Individual element-->
+h1
+{
+color:red;
+}
+
+<!--Example:-->
+<!--style.css-->>
+h2{
+color:red; 
+font-size:40px;
+}
+
+b{
+color:green;
+font-size:50px;
+}
+
+<!--index.html-->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<h1>Rama Krishna</h1>
+<h2>Rama Krishna</h2>
+<p>This is Paragraph Tag.</p>
+<b>This is Bold Tag.</b>
+</body>
+</html>
+
+<!--Group Selector-->
+<!--Grouping of some tags-->
+<!--style.css-->
+h2,p{
+color:red; 
+font-size:40px;
+}
+
+b{
+color:green;
+font-size:50px;
+}
+
+<!--index.html-->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<h1>Rama Krishna</h1>
+<h2>Rama Krishna</h2>
+<p>This is Paragraph Tag.</p>
+<b>This is Bold Tag.</b>
+</body>
+</html>
+
+
+<!--ID SELECTOR is used to give one element one id but in class not like that-->
+<!--style.css-->
+#top{
+color:red; 
+font-size:40px;
+}
+
+#pot{
+color:green;
+font-size:50px;
+}
+
+<!-- index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<h1 id="top">Rama Krishna</h1>
+<h2>Rama Krishna</h2>
+<p id="pot">This is Paragraph Tag.</p>
+<b>This is Bold Tag.</b>
+</body>
+</html>
+
+
+<!-- 4.	Class Selector: -->
+<!-- style.css -->
+.pot{
+color:green;
+font-size:50px;
+}
+
+.a { color :red }
+.b{ text-transform: uppercase; }
+
+<!-- index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<h1 class="pot">Rama Krishna</h1>
+<h2>Rama Krishna</h2>
+<p class="a b">This is Paragraph Tag.</p>
+<b>This is Bold Tag.</b>
+</body>
+</html>
+
+<!-- Attribute selector -->
+ <!-- style.css -->
+input[type="text"]{
+color:red;
+}
+    
+<!-- index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+Name: <input type="text">
+</body>
+</html>
+    
+

@@ -1,0 +1,72 @@
+<!-- cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML. CSS files save with .css -->
+
+<!-- Syntax -->
+selector
+{
+property:value;
+} 
+
+
+<!-- Example -->
+h1
+{
+color:red;
+} 
+
+<!-- CSS file save with .css
+There are three types of CSS
+Inline, Internal, external-->
+
+<!-- Inline CSS-->
+<!-- Apply properties to the html elements scope is with in the line-->
+
+<!--index.html-->
+<body> <h1 style="color: blue; font-size: 40px">Hello World</h1>
+<h1 style="color: red; font-size: 30px">Hi World</h1>
+</body>
+
+<!-- Internal CSS-->
+<!-- Apply properties to the html elements scope is with in the program-->
+
+<!--index.html-->
+<head>
+    <style>
+        h1  { 
+             color: blue; 
+            font-size: 50px;   
+        }
+        h2  { 
+             color: red; 
+            font-size: 30px;   
+        }
+    </style>
+</head>
+<body>
+     <h1>Hello World</h1>
+     <h2>Apple</h2>
+</body>
+
+<!-- External CSS-->
+<!-- Apply properties to the html elements scope to multiple programs need separate .css file-->
+
+<!--index.html-->
+<html>
+<head> <link rel="stylesheet" href="./style.css"></head>
+<body>
+ <h1>Hello World</h1>
+<h2>Apple</h2>
+</body>
+</html>
+
+<!--style.css-->
+h1  { 
+    color: blue; 
+    font-size: 50px;   
+    }
+    
+h2  { 
+    color: red;
+    font-size: 30px;   
+    }
+
+

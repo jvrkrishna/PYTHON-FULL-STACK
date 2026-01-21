@@ -1,0 +1,115 @@
+<!-- There are four types of combinators they
+1. Descendant Selector()
+2. Child Selector(>)
+3. Adjacent sibling Selector(+)
+4. General Sibling Selector(~)
+-->
+
+<!--Decendent selector - if we want remove from the format or if we want to apply a specific format to specific tags we can process with the help of descendent selector(space)
+
+Example-->
+<head>
+    <style>
+        div p{
+            background-color: rgb(220, 121, 121);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Ram</p>
+        <p>Rama</p>
+        <p>Banti</p>
+        <b>
+            <p>child</p>
+        </b>
+    </div>
+    <p>Raja</p>
+</body>
+
+<!--Child selector - if we don't want to apply for child even if they are in same tag then 
+process with the Child selector
+Example-->
+<head>
+    <style>
+        div>p{  /*Child selector */
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Ram</p>
+        <p>Rama</p>
+        <p>Banti</p>
+	    <b>
+         <p>child</p>    <!-- Here not apply the format -->
+        </b>
+    </div>
+    <p>Raja</p>
+</body>
+
+
+<!--General Sibling Selector(~)
+if we want apply a format to the followed(next) tags.
+
+Example-->
+<head>
+    <style>
+        p~h3{  /*format applied for h3 tags (h3 is followed by p) */
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Ram</p>
+        <h3>Rama</h3>  applied
+        <h3>Banti</h3> applied
+        <h2>Banti</h2> 
+        <h3>Banti</h3>  applied
+
+	<b>
+        <p>Ram</p>    
+        <h3>Rama</h3> applied
+    </b>
+    <i>
+        <h3>Rama</h3> not applied because this tag is not followed by any tag
+    </i>
+    </div>
+    <p>Raja</p>    
+    <h3>Banti</h3>  applied
+
+</body>
+
+<!--Adjacent sibling Selector(+)
+if we want apply a format to the followed(next) tag only(one tag only).
+
+Example-->
+<head>
+    <style>
+        p+h3{  /*format applied for h3 tag (h3 is followed by p) */
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Ram</p>
+        <h3>Rama</h3>  applied
+        <h3>Banti</h3> not applied
+        <h2>Banti</h2> 
+        <h3>Banti</h3>  not applied
+
+	<b>
+        <p>Ram</p>    
+        <h3>Rama</h3> applied
+    </b>
+    <i>
+        <h3>Rama</h3> not applied
+    </i>
+    </div>
+    <p>Raja</p>    
+    <h3>Banti</h3>  applied
+
+</body>

@@ -1,0 +1,91 @@
+<!-- The background-blend-mode CSS property sets how an element's background images should blend with each other and with the element's background color.
+Background-blend-mode is used to give multiple backgrounds like color&image, color&color etc. -->
+
+<!-- Index.html -->
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+</body>
+</html>
+
+<!-- style.css -->
+body{
+    /* background: url("./sam.jpg"),rgb(221, 46, 46,0.5); */
+    /* background: url("./sam.jpg"), url("./mo.jpg"); */
+    background: url("./sam.jpg"), linear-gradient(45deg, red ,green);
+    background-size: cover;
+    background-blend-mode:multiply;    
+}
+
+<!-- Example: -->
+<head>
+<style>
+body{
+    /* background: url("./sam.jpg"),rgb(221, 46, 46,0.5); */
+    /* background: url("./sam.jpg"), url("./mo.jpg"); */
+    background: url("./a.png"), linear-gradient(45deg, red ,green);
+    background-size: cover;
+    background-blend-mode:multiply;    
+}
+</style>
+</head>
+<body>
+</body>
+
+<!-- Multiple Backgrounds images: -->
+background-image: url(a.jpg),url(b.jpg);
+background-position: left top, right bottom;
+background-repeat: repeat, no-repeat;
+background-size: 50px 50px;
+
+<!-- Example: -->
+ <head>
+<style>
+body{
+background-image: url("./a.png"),url("./b.png");
+background-position: left top,right bottom;
+background-repeat:no-repeat;
+background-size: 500px 500px;
+background-blend-mode:multiply;     
+}
+</style>
+</head>
+<body>
+</body>
+
+
+<!-- Multiple Background colors: -->
+body
+{
+background: linear-gradient(orange,white,green,aqua);
+background: linear-gradient(to right, orange, white, green, aqua, red);
+background: linear-gradient(to bottom right, orange, white, green, aqua, red);
+background: linear-gradient(orange 30%,white 20%,green 30%,aqua 20%);
+}
+
+<!-- Style.css -->
+p
+{
+border:10px solid;
+border-image:url(a.jpg) 30 round;
+}
+
+border-image:url(a.jpg) 30 stretch;
+border-image:url(a.jpg) 30% round;
+
+<!-- Example: -->
+<head>
+<style>
+p
+{
+border:10px solid;
+border-image:url("./a.png") 30 stretch; /* use round also in stretch */
+}
+</style>
+<body>
+    <p>
+Janahita Training and Placements
+</p>
+</body

@@ -1,0 +1,82 @@
+<!-- VISIBILITY -->
+This property is used to decide whether the element will display in webpage or not.
+
+Visibility: Visible  | hidden | collapse
+
+Visibility: visible -------------> this is the default one
+Visibility: hidden ------------> It will hide the element and space will be occupy as it is.
+Visibility: collapse------------> same as hidden but it other element will occupy its space. It is basically used with table.
+
+<!-- Index.html -->
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+</body>
+
+<!-- Style.css -->
+*
+{
+margin:1px;
+padding:1px;
+}
+
+#div1{
+background-color: red;
+width: 100px;
+height: 100px; 
+text-align: center;  
+color: white;
+}
+
+#div2{
+   background-color: green;
+   width: 100px;
+   height: 100px; 
+   text-align: center;  
+   color: white;
+   visibility: hidden;
+   <!-- The CSS property visibility: collapse does not work with <div> elements. -->
+}
+
+#div3{
+   background-color: blue;
+   width: 100px;
+   height: 100px; 
+   text-align: center;  
+   color: white;
+}
+
+#div4{
+   background-color: yellowgreen;
+   width: 100px;
+   height: 100px; 
+   text-align: center;  
+   color: white;
+}
+
+<!-- Using Table
+Index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+    <body> 
+        <table border="1">
+            <tr> <th>Heading 1</th> <th>Heading 2</th> </tr>
+            <tr>
+            <td>row 1, cell 1</td>
+            <td>row 1, cell 2</td>
+            </tr>
+            <tr id="d1">
+            <td>row 2, cell 1</td>
+            <td>row 2, cell 2</td>
+            </tr>
+            </table>            
+    </body>
+</html>
+
+<!-- Style.css -->
+#d1{
+   visibility: collapse;
+}

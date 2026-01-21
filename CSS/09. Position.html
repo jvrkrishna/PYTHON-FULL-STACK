@@ -1,0 +1,95 @@
+The position property specifies how an element is positioned in a document.
+
+Position: static(default), relative, absolute, fixed, sticky;
+
+Elements are basically positioned using the top, bottom, left and right properties. But, these properties will work if the position property is set.
+
+Relative: The applied element positions changes from its original position.
+Absolute: The applied element position changes from parent and change the remaining elements to its original position.
+
+
+<!-- Example for Position absolute and relative: -->
+<!-- style.css: -->
+.box{
+    height: 400px;
+    width:600 px;
+    background-color: aliceblue;
+}
+
+.box div{
+    display: inline-block;
+}
+
+#div1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#div2{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+#div3{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+<!-- Index.html -->
+<html>
+    <head>
+        <title>Position</title>
+        <style>
+            .box{
+                width: 500px;
+                height: 400px;
+                background-color: yellow;
+            }
+
+            .box div{
+                display: inline-block;
+            } 
+
+            #div1{
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                border-radius: 50%;
+                
+            }
+
+            #div2{
+                height: 100px;
+                width: 100px;
+                background-color: orange;
+                border-radius: 50%; 
+                position: relative;
+                top:10px;
+                left:20px;
+            }
+
+            #div3{
+                height: 100px;
+                width: 100px;
+                background-color: green;
+                border-radius: 50%; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <div id="div3"></div>
+        </div>
+    </body>
+</html>
+<!-- Example for Position sticky and fixed: -->
+Sticky ----------- Movement then fixed (for sticky mandatory like top:5px)
+Fixed ------------ fixed

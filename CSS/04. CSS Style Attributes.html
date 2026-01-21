@@ -1,0 +1,183 @@
+<!-- 
+ 1.	Background
+2.	Font
+3.	Text
+4.	links
+5.	Border
+6.	Table
+7.	Image
+8.	List 
+-->
+
+1.Background:
+•	background-color : "red";
+•	background-image: url(" ");
+•	background-repeat: no-repeat/repeat-x/repeat-y;
+•	background-position: right/left/center/right top/right bottom/20px/200px 300px;
+•	background-attachment: fixed/scroll;
+•	background-size: cover/contain (Cover stretches the image and contain gives original image without stretch and loop)
+•	background-origin: content-box/padding-box/border-box (padding-box means both content and padding box)(border-box means both border+padding+content) (origin supports image)
+•	background-clip: content-box/padding-box/border-box (padding-box means both content and padding box)(border-box means both border+padding+content) (clip supports color)
+
+<!-- Example:
+Style.css -->
+p{
+background-color:green;
+}
+
+<!-- Index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<p>If one of the properties in the shorthand declaration is the bg-size property, you must use a / (slash) to separate it from the bg-position property, e.g. background:url(smiley.gif) 10px 20px/50px 50px; will result in a background image, positioned 10 pixels from the left, 20 pixels from the top, and the size of the image will be 50 pixels wide and 50 pixels high.</p>
+
+<p>If one of the properties in the shorthand declaration is the bg-size property, you must use a / (slash) to separate it from the bg-position property, e.g. background:url(smiley.gif) 10px 20px/50px 50px; will result in a background image, positioned 10 pixels from the left, 20 pixels from the top, and the size of the image will be 50 pixels wide and 50 pixels high.</p>
+</body>
+</html>
+
+<!-- Back Ground-origin Example -->
+<html>
+    <head>
+        <style>
+            p{
+                height:400px;
+                width:600px;
+                background-color: teal;
+                background-image: url("./Images/icon.gif");
+                padding: 30px;
+                background-origin: padding-box;
+                /* Here content box means ----content box;
+                Here padding box means ---content box+padding; */
+            }
+        </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet laudantium repellat fuga nesciunt eius amet, cupiditate explicabo libero saepe dolore deleniti pariatur minus odio sint accusamus excepturi. Fuga, eveniet alias.</p>
+    </body>
+</html>
+
+
+2.Font:
+•	font-family: algerian;
+•	font-style: bold/italic/oblique;
+•	font-variant: small-caps;
+•	font-weight: bold/bolder/lighter/100/300;
+•	font-size: 20px/30%/small/large/x-small;
+•	color: red;
+
+3.Text:
+•	direction: rtl,ltr;   (rtl----- i.e., right to left)
+•	letter-spacing: 1px/2px/-1px;
+•	word-spacing: 1px/2px;
+•	text-indent: 30px; (In paragraph 1st line moves 30px indent)
+•	text-align: left/right/center/justify;
+•	text-decoration: underline/overline/line-through/none;
+•	text-transform: lowercase/uppercase/capitalize/none;
+•	white-space: pre/normal/nowrap;
+•	text-shadow: 2px 3px 4px blue;
+
+4.Links:
+•	Link
+•	Active (When we click)
+•	Visited
+•	Hover (On mouse over)
+
+<!-- Example:
+Index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<a href="https://www.janahitaplacements.com">Click Here</a>
+</body>
+</html>
+
+<!-- Style.css -->
+a
+{background-color:yellow;}
+
+a:link{color:red;}
+
+a:active{color:blue;}
+
+a:visited{color:black;}
+
+a:hover{color:maroon;
+	font-size:large;}
+
+5.Border:
+•	border-color
+o	border-bottom-color
+o	border-top-color
+o	border-left-color
+o	border-right-color
+
+<!-- •	border-style -->
+o	border-bottom-style:solid/dotted/dashed/double/groove/ridge;
+o	border-top-style
+o	border-left-style
+o	border-right-style
+
+<!-- •	border-width -->
+o	border-bottom-width
+o	border-top-width
+o	border-left-width
+o	border-right-width
+
+•	border: 4px dotted red
+•	border-style: inset/outset
+•	border-radius: 4px
+•	border-bottom-left-radius: 200px;
+•	border-radius: 100px 0px 100px 0px;
+•	border-radius: 50px/100px;
+•	border-radius: 50%/100%;
+
+<!-- index.html -->
+<html>
+<head><link rel="stylesheet" href="./style.css"></head>
+<body>
+<img src="C:\Users\Rama Krishna\Pictures\Screenshots\a.png" border="8px">
+</body>
+</html>
+
+<!-- Style.css -->
+img
+{
+border:red dotted;
+}
+
+6.Tables:
+•	caption-side: left/right/top/bottom;
+•	border-collapse: collapse/separate;
+•	border-spacing: 5px
+•	empty-cells: show/hide
+•	border-color: red;
+•	border-style: dotted;
+•	border-width: 4px;
+•	border-radius: 4px
+
+7.Img:
+•	border
+•	hover
+•	border-radius: 4px
+
+<!-- Example: -->
+img
+{
+border-color:red;
+border-style:dashed;
+border-width:5px;
+}
+
+img:hover{
+	width:500px;
+	height:500px;
+}
+
+8.List
+•	list-style-type:none/circle/1/square;
+•	list-style-position: inside;
+•	list-style-image: url(" ");
+•	marker-offset:25px/20cm;    (distance between point symbol and text)
+
+<!-- Resize: It is used to resize the border. -->
+resize: horizontal/vertical/both;

@@ -1,0 +1,198 @@
+<!-- Float Property -->
+•	Float property is used for positioning the element.
+•	It is basically useful for designing layout.
+•	Float is having two values left | right
+•	By using float we can decide the element will be display in left or right side.
+
+<!-- Index.html -->
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="div1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, qui eius minus fugit reiciendis deleniti aspernatur eveniet velit ipsam? Iusto ea quis dolores vitae ut cumque, dolorum mollitia nam quisquam? Esse atque quasi beatae quo nam aut ad, a eveniet excepturi distinctio quos nobis itaque. Cum, ad praesentium? Incidunt recusandae dolore nihil quam eius eligendi odit suscipit animi laudantium, voluptatibus alias, sunt quasi doloribus atque totam pariatur dolorem, eos veniam tempora nostrum odio! Ex amet unde, ut quaerat ea suscipit quae consequuntur. Incidunt blanditiis doloribus voluptatem optio veniam velit. Asperiores ipsum temporibus nihil commodi aut aliquid! Atque maxime at odio.
+    </div>
+    <div class="div2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos blanditiis iusto, cumque mollitia modi laudantium ipsam rerum repellat est quam sit in ab, similique aliquam, cupiditate fuga eum doloremque. In accusamus eveniet blanditiis consequuntur iure vitae aut harum. Optio esse deserunt iure earum maxime asperiores quibusdam tempora non corrupti incidunt, adipisci fugiat consequatur voluptas reiciendis libero, sit quia repellendus commodi. Minus perspiciatis neque voluptates ratione dolores quasi architecto, fugiat natus enim soluta dolorem incidunt ut excepturi exercitationem voluptatum non omnis pariatur culpa similique adipisci dignissimos. Tempore, aperiam quisquam commodi exercitationem alias eveniet inventore? Fuga nisi dolorum aperiam commodi error iste!
+    </div>
+</body>
+</html>
+
+<!-- Style.css -->
+*
+{
+    padding:0px;
+    margin:0px;
+}
+.div1{
+    background-color: red;
+    color:white;
+    width:30%;
+    float:left;
+}
+
+.div2{
+    background-color: green;
+    color: white;
+    width:70%;
+    float:right;
+}
+
+<!-- Pragraph with image -->
+<!-- Index.html -->
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <img src="./sam.jpg" id="image">
+    <div class="div1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, qui eius minus fugit reiciendis deleniti aspernatur eveniet velit ipsam? Iusto ea quis dolores vitae ut cumque, dolorum mollitia nam quisquam? Esse atque quasi beatae quo nam aut ad, a eveniet excepturi distinctio quos nobis itaque. Cum, ad praesentium? Incidunt recusandae dolore nihil quam eius eligendi odit suscipit animi laudantium, voluptatibus alias, sunt quasi doloribus atque totam pariatur dolorem, eos veniam tempora nostrum odio! Ex amet unde, ut quaerat ea suscipit quae consequuntur. Incidunt blanditiis doloribus voluptatem optio veniam velit. Asperiores ipsum temporibus nihil commodi aut aliquid! Atque maxime at odio.
+    </div>
+    
+</body>
+</html>
+
+<!-- Style.css -->
+#image{
+    width: 150px;
+    height: 150px;
+    float:left;
+    padding:5px;
+}
+
+.div1{
+    width:30%;
+    border: 2px dotted red;
+    padding:10px;
+    text-align: justify;
+}
+
+Note: If we apply float property to any element it will come outside of its container (means if we use <p <img>> then img is in paragraph container if we apply float to image then img come out from paragraph container. On that scenario we have to use overflow:auto to paragraph.
+
+
+<!-- Clear Property -->
+Clear property is used to decide weather the element will appear or not in left or right side of any floated element.
+Clear property have 3 values left/right/both.
+
+<!-- Index.html -->
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="div1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, qui eius minus fugit reiciendis deleniti aspernatur eveniet velit ipsam? Iusto ea quis dolores vitae ut cumque, dolorum mollitia nam quisquam? Esse atque quasi beatae quo nam aut ad, a eveniet excepturi distinctio quos nobis itaque. Cum, ad praesentium? Incidunt recusandae dolore nihil quam eius eligendi odit suscipit animi laudantium, voluptatibus alias, sunt quasi doloribus atque totam pariatur dolorem, eos veniam tempora nostrum odio! Ex amet unde, ut quaerat ea suscipit quae consequuntur. Incidunt blanditiis doloribus voluptatem optio veniam velit. Asperiores ipsum temporibus nihil commodi aut aliquid! Atque maxime at odio.
+    </div>
+    <div class="div2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, qui eius minus fugit reiciendis deleniti aspernatur eveniet velit ipsam? Iusto ea quis dolores vitae ut cumque, dolorum mollitia nam quisquam? Esse atque quasi beatae quo nam aut ad, a eveniet excepturi distinctio quos nobis itaque. Cum, ad praesentium? Incidunt recusandae dolore nihil quam eius eligendi odit suscipit animi laudantium, voluptatibus alias, sunt quasi doloribus atque totam pariatur dolorem, eos veniam tempora nostrum odio! Ex amet unde, ut quaerat ea suscipit quae consequuntur. Incidunt blanditiis doloribus voluptatem optio veniam velit. Asperiores ipsum temporibus nihil commodi aut aliquid! Atque maxime at odio.
+    </div>
+    <div class="footer">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, qui eius minus fugit reiciendis deleniti aspernatur eveniet velit ipsam? Iusto ea quis dolores vitae.
+    </div>
+    
+</body>
+</html>
+
+<!-- Style.css -->
+.div1{
+    background-color: red;
+    width:30%;
+    height:300px;
+    float:left;
+}
+
+.div2{
+    background-color: green;
+    width:70%;
+    height:400px;
+    float:right;
+}
+
+.footer{
+    background-color: yellowgreen;
+    height: 100px;
+    clear:both;
+}
+
+<!-- Practical -->
+<!-- Index.html -->
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="div1">
+        <img src="./sam.jpg">
+        <h1>HIE TECH SOLUTIONS</h1>
+    </div>
+
+    <div class="div2">
+        <b><a>HOME</a>
+        <a>COURSES</a>
+        <a>ABOUT</a>
+        <a>CONTACT</a></b>
+    </div>
+    
+    <div class="main">
+        <img src="mo.jpg"
+    </div>
+</body>
+</html>
+
+<!-- Style.css -->
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.div1{
+    background-color: rgb(198, 114, 114);
+    width:30%;
+    height:100px;
+    float:left;
+}
+.div1 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float:left;
+}
+
+h1{
+    padding-top:40px;
+}
+
+.div2{
+    background-color: rgb(180, 237, 180);
+    width:70%;
+    height:100px;
+    float:right;
+}
+
+a{
+    width:80px;
+    float: right;
+    margin-top: 80px;
+    word-spacing: 80px;
+    margin-left: 25px;
+    }
+    
+    a:hover{
+    background-color: rgb(229, 72, 72);
+    }
+    
+
+.main{
+    background-color: rgb(229, 135, 57);
+    height: 300px;
+    clear:both;
+}
+
+.main img{
+    width: 100px;
+    height: 100px;
+    padding:100px;
+    margin-left: 500px;
+}
+

@@ -1,0 +1,34 @@
+<!-- CSS Media Queries -->
+The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.
+Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.
+Media queries can be used to check many things, such as:
+•	width and height of the viewport
+•	orientation of the viewport (landscape or portrait)
+•	resolution
+Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).
+
+<!-- Example: -->
+<head>
+<style>
+body
+{
+background-color:red;
+margin:0px;
+padding:170px;
+text-align:center;
+font-weight:bolder;
+font-size:20px;
+}
+
+@media screen and (min-width:300px) and (max-width:500px)
+{
+body{
+background-color:green;
+}
+}
+</style>
+</head>
+<body>
+<p>Rama Krishna</p>
+</body>
+

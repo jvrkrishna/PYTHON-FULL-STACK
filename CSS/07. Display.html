@@ -1,0 +1,39 @@
+<!-- Display property basically used to specifies display mode of the element.
+The main uses of display property is to convert inline to block and block to inline, 
+then hide elements and etc. -->
+
+{display: none;}
+{display: inline;} -------default
+{display: block;}
+{display: inline-block;}
+
+Some inline elements:
+<a> <input>
+
+Some block elements:
+<div> <p>
+
+<!-- index.html -->
+<html>
+<head>
+<title>Display</title>
+<style>
+    a{
+    display:block;
+    background-color: brown;
+    width: 5%;
+    padding: 3px;
+    margin-bottom: 10px; /* Adds space between lines */
+    }
+    a:hover{
+        background-color: yellowgreen;
+    }
+</style>
+</head>
+<body>
+<a href="https://www.google.com/">Google</a>
+<a href="https://www.facebook.com/">Facebook</a>
+<a href="https://www.youtube.com/">Youtube</a>
+<a href="https://www.gmail.com/">Gmail</a>
+</body>
+</html>

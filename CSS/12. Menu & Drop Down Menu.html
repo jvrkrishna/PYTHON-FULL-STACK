@@ -1,0 +1,125 @@
+<!-- How To Add a Favicon in HTML
+A favicon is a small image displayed next to the page title in the browser tab. -->
+<!-- MENU BAR WITH FAVICON -->
+<!-- Index.html -->
+<head>
+  <title>My Page Title</title>
+   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">COURSES</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">SIGNIN</a></li>
+<li><a href="#">SIGNUP</a></li>
+</ul>
+
+<!-- Style.css -->
+*
+{
+margin:0px;
+padding:0px;	
+}
+
+ul
+{
+font-size:18px;
+font-weight:bolder;
+list-style:none;
+background:aqua;
+/* If u Want give height and width also. */
+}
+
+ul li
+{
+display: inline-block;
+}
+
+ul li a
+{
+text-decoration:none;
+padding: 20px 20px;
+color:black;
+display: block;
+}
+
+ul li a:hover
+{
+background-color:green;
+color:white;
+}
+
+<!-- DROP DOWN MENU BAR -->
+
+<!-- Index.html -->
+<head><link rel="stylesheet" href="./style.css"></head>
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">COURSES</a>
+<ul>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">JAVA</a></li>
+</ul>
+</li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">SIGNIN</a></li>
+<li><a href="#">SIGNUP</a></li>
+</ul>
+
+<!-- Style.css -->
+
+*
+{
+margin:0px;
+padding:0px;
+}
+
+ul
+{
+font-size:18px;
+font-weight:bolder;
+list-style:none;
+background:aqua;
+position: fixed;
+}
+
+ul li
+{
+display:inline-block;
+}
+
+ul li a
+{
+text-decoration:none;
+padding: 15px 15px;
+color:black;
+display: block;
+}
+
+ul li a:hover
+{
+background-color:green;
+color:white;
+}
+
+ul li
+{
+float:left;
+}
+
+ul li ul li
+{
+float:none;
+display:none;
+padding: 10px 15px;
+}
+
+ul li:hover ul li
+{
+display:block;
+
+}
+
+

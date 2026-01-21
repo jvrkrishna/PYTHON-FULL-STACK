@@ -1,0 +1,45 @@
+<!-- If we want to use multi color then better to go with gradient. -->
+ Types of gradients
+ 1. Linear
+ 2. Radial
+ 3. Conic
+
+ <!-- 1. Linear Gradient -->
+ style.css
+ .c1
+ {
+    height:450px;
+    width: 100%;
+    background-image: linear-gradient(red,green);
+    background-image: linear-gradient(to right,red,green,yellow,brown);
+    background-image: linear-gradient(90deg, red,green);
+    background-image: linear-gradient(to right, red 20%, green 80%);
+    background-image: linear-gradient(rgba(255,10,10,0.5),blue);
+    background-image: repeating-linear-gradient(red 10%, green 20%);
+ }
+
+ <!-- 2. Radial Gradeint -->
+ style.css
+ .c1
+ {
+    height:450px;
+    width: 100%;
+    background-image: radial-gradient(red,green); 
+    background-image: radial-gradient(circle, red 20%, green 80%);
+    background-image: radial-gradient(rgba(255,10,10,0.5),blue);
+    background-image: repeating-radial-gradient(red 10%, green 20%);
+ }
+
+ <!-- 3. conic gradient -->
+ style.css
+ .c1
+ {
+    height:450px;
+    width: 100%;
+    background-image: conic-gradient(red,green);
+    background-image: conic-gradient(red 180deg,green,yellow);
+    background-image: conic-gradient(at 25% 25%,red,green,yellow);
+    background-image: conic-gradient(circle, red 20%, green 80%);
+    background-image: conic-gradient(rgba(255,10,10,0.5),blue);
+    background-image: repeating-conic-gradient(red 10%, green 20%);
+ }
