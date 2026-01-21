@@ -1,0 +1,15 @@
+•	HTML5 tutorial provides details of all 40+ HTML tags including audio, video, header, footer, data, datalist, article etc.
+•	HTML5 is a next version of HTML. Here, you will get some brand new features which will make HTML much easier. These new introducing features make your website layout clearer to both website designers and users.
+•	There are some elements like <header>, <footer>, <nav> and <article> that define the layout of a website.
+•	It allows you to play a video and audio file.
+•	<article>-This element is used to define an independent piece of content in a document, that may be a blog, a magazine or a newspaper article.
+•	<audio>-It is used to play audio file in HTML.
+•	<footer> It defines a footer for a section.
+<header> It defines a header for a section.
+<main> It defines the main content of a document.
+•	<nav>-It is used to define the navigation link in the document.
+•	<progress>-It specifies the progress of the task.
+•	<section>- It defines a section in the document.
+•	<time>- It is used to define a date/time.
+•	<video>-It is used to play video file in HTML.
+

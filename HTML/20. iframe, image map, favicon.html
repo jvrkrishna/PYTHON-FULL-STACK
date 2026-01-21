@@ -1,0 +1,81 @@
+<!-- 
+Image Maps
+The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+Try to click on the computer, phone, or the cup of coffee in the image below:
+
+
+Shape
+You must define the shape of the clickable area, and you can choose one of these values:
+•	rect - defines a rectangular region
+•	circle - defines a circular region
+•	poly - defines a polygonal region
+•	default - defines the entire region
+Example: -->
+<html>
+<body>
+
+<h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img src="./Images/a.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+</body>
+</html>
+
+<!-- The <iframe> tag specifies an inline frame.
+
+An inline frame is used to embed another document within the current HTML document.
+
+Tip: Use CSS to style the <iframe> (see example below). 
+
+Tip: It is a good practice to always include a title attribute for the <iframe>. This is used by screen readers to read out what the content of the <iframe> is.
+<html>
+<body> -->
+
+  <h1>The iframe element </h1>
+
+  <p>An iframe with default borders:</p>
+  <iframe src="https://www.google.com" width="100%" height="300">
+  </iframe>
+  
+  <p>An iframe with a thin black border:</p>
+  <iframe src="https://www.google.com" width="100%" height="300" style="border:1px solid black;">
+  </iframe>
+  
+  <p>An iframe with no borders:</p>
+  <iframe src="https://www.google.com" width="100%" height="300" style="border:none;">
+  </iframe>
+  
+  </body>
+  </html>
+
+
+
+<!-- Favicon
+A favicon is a small image displayed next to the page title in the browser tab.
+To add a favicon to your website, either save your favicon image to the root directory of your webserver, or create a folder in the root directory called images, and save your favicon image in this folder. A common name for a favicon image is "favicon.ico".
+
+Next, add a <link> element to your "index.html" file, after the <title> element, like this:
+
+Example -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="./Images/icon.gif">
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+  
+

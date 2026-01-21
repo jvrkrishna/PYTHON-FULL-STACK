@@ -1,0 +1,126 @@
+<!-- 
+HTML Frames are used to divide the web browser window into multiple sections where each section can be loaded separately. A frameset tag is the collection of frames in the browser window.
+Creating Frames: Instead of using body tag, use frameset tag in HTML to use frames in web browser. But this Tag is deprecated in HTML 5. The frameset tag is used to define how to divide the browser. Each frame is indicated by frame tag and it basically defines which HTML document shall open into the frame. To define the horizontal frames use row attribute of frame tag in HTML document and to define the vertical frames use col attribute of frame tag in HTML document.
+
+Attributes are border=”1”, scrollbar=”no”
+Example: framset with rows -->
+<html> 
+    <head> 
+        <title>Example of HTML Frames using row attribute</title> 
+    </head> 
+          
+    <frameset rows = "20%, 60%, 20%"> 
+        <frame name = "top" src =  
+        "C:/Users/dharam/Desktop/attr1.png" /> 
+        <frame name = "main" src =  
+        "C:/Users/dharam/Desktop/gradient3.png" /> 
+        <frame name = "bottom" src =  
+        "C:/Users/dharam/Desktop/col_last.png" /> 
+        <noframes> 
+            <body>The browser you are working does  
+                        not support frames.</body> 
+        </noframes> 
+    </frameset> 
+</html>  
+
+<!-- Example: framset with cols -->
+<html>     
+    <head> 
+        <title>Example of HTML Frames Using col Attribute</title> 
+    </head> 
+          
+    <frameset cols = "30%, 40%, 30%"> 
+        <frame name = "top" src =  
+        "C:/Users/dharam/Desktop/attr1.png" /> 
+        <frame name = "main" src =  
+        "C:/Users/dharam/Desktop/gradient3.png" /> 
+        <frame name = "bottom" src =  
+        "C:/Users/dharam/Desktop/col_last.png" />         
+        <noframes> 
+            <body>The browser you are working does  
+                         not support frames.</body> 
+        </noframes> 
+    </frameset> 
+</html> 
+
+<!-- Example: Combination of rows and cols -->
+<html> 
+    <head> 
+        <title>Example of HTML Frames using row attribute</title> 
+    </head> 
+          
+    <frameset rows = "20%, 60%, 20%"> 
+        <frame name = "top" src =  
+        "C:"> 
+        <frame name = "main" src =  
+        "C:"> 
+        <frameset cols="50%,*">
+        <frame name = "bottom1" src =  
+        "C:"> 
+        <frame name = "bottom2" src =  
+        "C:"> 
+        <noframes> 
+            <body>The browser you are working does  
+                        not support frames.</body> 
+        </noframes> 
+    </frameset> 
+</frameset> 
+</html>  
+
+<!-- Task
+Main.html -->
+<html> 
+    <head> 
+        <title>Example of HTML Frames using row attribute</title> 
+    </head> 
+          
+    <frameset rows = "20%, 60%, 20%" border="0"> 
+
+        <frameset cols="20%,*" border="0">
+            <frame name = "top1" src =  
+            "t1.html"> 
+            <frame name = "top2" src =  
+            "t2.html"> 
+        </frameset> 
+
+        <frameset cols="20%,*" border="0">
+            <frame name = "center1" src =  
+            "c1.html"> 
+            <frame name = "center2" src =  
+            "c2.html"> 
+        </frameset> 
+
+        <frame name = "bottom" src =  
+        "bottom.html" scrollbar="no"> 
+</frameset> 
+</html>       
+
+<!-- t1.html -->
+<html>
+    <body>
+        <img src="C:\Users\Rama Krishna\Downloads\images.jpg" width="298" height="125">
+    </body>
+</html>
+
+<!-- t2.html -->
+<html>
+    <body bgcolor="maroon">
+        <center>
+            <font size="20" color="white">Janahita Educational Institutions</font>
+        </center>
+    </body>
+</html>
+
+<!-- C1.html -->
+<html>
+    <body bgcolor="maroon">
+          <font color="white" > 
+            <a href="1.Heading.html" target="center2">Home</a><br><br>
+    </body>
+</html>
+
+<!-- C2 & bottom.html -->
+<html>
+    <body bgcolor="grey"></body>
+</html>
+

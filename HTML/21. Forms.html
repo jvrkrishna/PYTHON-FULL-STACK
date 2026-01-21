@@ -1,0 +1,224 @@
+<!-- 
+•HTML Forms are required when you want to collect some data from the site visitor. For example during user registration you would like to collect information such as name, email address, credit card, etc.
+•There are various form elements available like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.
+•The HTML <form> tag is used to create an HTML form.
+•Apart from common attributes, following is a list of the most frequently used form attributes:
+action Backend script ready to process your passed data.
+method Method to be used to upload data. The most frequently used are GET and POST methods.
+target Specify the target window or frame where the result of the script will be displayed. It takes values like _blank, _self, _parent etc.
+•There are different types of form controls that you can use to collect data using HTML form: -->
+
+<!-- •Those are: -->
+Single-line text input controls <input type="text" name="name"/>
+Password input controls <input type="password" name="pwd" />
+Email input controls <input type="email" name="email" />
+Number input controls <input type="number" name="number" />
+Dae input controls <input type="date" name="date" /> 
+Multi-line input controls <textarea rows="5" cols="50" name="description">
+Checkbox controls <input type="checkbox" name="m1" />
+Radio Button controls <input type="radio" name="male" />
+Select Box controls <select name="select" ><option value="Maths">Maths</option>
+File upload box <input type="file" name="fileupload" accept="image/*" />
+Button controls <input type="submit" name="submit" value="Submit" /> 
+<input type="reset" name="reset" value="Reset" /> 
+<input type="button" name="ok" value="OK" /> 
+<input type="image" name="imagebutton" src="/html/images/logo.png" /> 
+color <input type="color" name="color" /> 
+search <input type="search" name="search" /> 
+url <input type="url" name="url" /> 
+
+
+<!-- 
+Some attributes of form controls size, maxlength, checked, multiple, placeholder, value, pattern
+Text Box: -->
+<form action="/action_page.php">
+<h1>Text Box</h1>
+<h2>Login Form</h2>
+Username: <input type="text" name="name" value="" maxlength="15" placeholder="Enter username" pattern="[a-zA-Z]{3}"><br><br>
+Password: <input type="password" name="pass" value="" maxlength="9" placeholder="Enter password" pattern="[0-9]"><br><br>
+<input type="submit">
+</form>
+
+
+<!-- Radio: -->
+<form>
+<h1>Radio Buttons</h1>
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+</form>
+
+<!-- Checkbox -->
+<form>
+<h1>CheckBox</h1>
+<h3>Known Languages</h3>
+<input type="checkbox" value="Telugu">Telugu
+<input type="checkbox" value="English">English
+<input type="checkbox" value="Hindi">Hindi
+</form>
+
+<!-- Textarea -->
+<form>
+<h1>Textarea</h1>
+<h3>Address</h3>
+<textarea rows="5" cols="10">
+    </textarea>
+</form>
+
+<!-- Select -->
+<form>
+<h1>select</h1>
+<select>
+    <option>--select--</option>
+    <option>C++</option>
+    <option>Java</option>
+    <option>Phython</option>
+    <option>C</option>
+</select>
+</form>
+
+<!-- Range -->
+<input type="range">
+
+<!-- Browse -->
+<form action="/action_page.php">
+<h1>Browse</h1>
+<input type="file" name="file" accept="image/*">
+<input type="submit">
+</form>
+
+<!-- Buttons -->
+<form>
+<h1>Button</h1>
+<input type="Submit" name="submit" value="Submit">
+<input type="Reset" name="reset" value="Reset">
+<input type="button" name="button" value="click me"><br><br>
+<input type="image" name="imgbtn" src="">
+</form>
+
+
+<!-- 
+HTML5 added new types on <input> element. Following is the list of types of elements of HTML5
+type=" "	Description
+color=Defines an input field with a specific color.
+date=Defines an input field for selection of date.
+datetime-local=Defines an input field for entering a date without time zone.
+email=Defines an input field for entering an email address.
+month=Defines a control with month and year, without time zone.
+number=Defines an input field to enter a number.
+url=Defines a field for entering URL
+week=Defines a field to enter the date with week-year, without time zone.
+search=Defines a single line text field for entering a search string.
+tel=Defines an input field for entering the telephone number. -->
+
+<!-- Example: -->
+<html>
+<head><title>REGISTRATION FORM</title></head>
+<body bgcolor="fushsia">
+
+<form action="C:\Users\Rama Krishna\Desktop\out.html" method="post" target=_blank>
+
+<fieldset>
+<legend><h1>Internship Form</h1></legend>
+
+<table>
+<tr>
+<td>Name:</td>
+<td><input type="text" placeholder="Enter Name" required maxlength=15 pattern="[A-Za-z]{15}"   autofocus></td>
+</tr>
+
+<tr>
+<td>EMail:</td>
+<td><input type="email" placeholder="Enter Mail Id"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="password" placeholder="Enter Password"></td>
+</tr>
+
+<tr>
+<td>Phone Number:</td>
+<td><input type="text" value="+91 "></td>
+</tr>
+
+<tr>
+<td>Date of Birth:</td>
+<td><input type="Date" min="1997-1-1" max="2024-01-04"></td>
+</tr>
+
+<tr>
+<td>Gender:</td>
+<td><input type="radio" name="a">Male  
+       <input type="radio" name="a">Female</td>
+</tr>
+
+<tr>
+<td>Address:</td>
+<td><textarea rows=4 cols=35>
+</textarea></td>
+</tr>
+
+<tr>
+<td>Known Languages:</td>
+<td><input type="checkbox">Telugu
+<input type="checkbox">English
+<input type="checkbox">Hindi</td>
+</tr>
+
+<tr>
+<td>Your Qulification:</td>
+<td><input type="radio" name="q">SSC
+                <input type="radio" name="q">Inter
+                <input type="radio" name="q">UG
+		<input type="radio" name="q">PG
+</td>
+</tr>
+
+<tr>
+<td>Marks Scored:</td>
+<td><input type="number" placeholder="points" min=5 max=10></td>
+</tr>
+
+<tr></tr>
+
+<tr><td colspan="2">How many months you want to participate in our internship program?</td><tr>
+<tr>
+<td></td>
+<td>
+<select>
+<option></option>
+<option>3 Months</option>
+<option>6 Months</option>
+<option>1 Year</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Resume:</td>
+<td><input type="file" accept=".doc/*" multiple="multiple"></td>
+</tr>
+<tr>
+<td>Price</td>
+<td>
+<input type="range" min="0" max="100" step="2">
+</td>
+</tr>
+<tr>
+<td colspan="2"><button type="submit">Register</button></td>
+</tr>
+</table>
+<h3>Already Registered? <a href="#">Login Here</a></h3>
+
+</fieldset>
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+

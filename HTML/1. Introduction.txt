@@ -1,0 +1,153 @@
+🌐 1. What is a Website?
+Definition
+A website is a collection of related web pages that are stored on a web server and accessed through the Internet using a web browser. All the pages in a website are usually connected by links and share a common domain name.
+
+Example
+www.example.com
+www.google.com
+Uses of a Website
+Providing information (news, education)
+Entertainment (videos, games)
+Communication (email, social media)
+Online shopping (e-commerce)
+Business promotion
+
+Key Components of a Website
+Web Pages
+Individual documents of a website
+Written using HTML
+Styled using CSS
+Interactive using JavaScript
+Domain Name
+The address of the website
+
+Example: www.example.com
+Web Server
+A computer that stores website files
+Sends pages to users when requested
+
+Web Hosting
+Service that provides space on a server to store website files
+Content Management System (CMS) (Optional)
+Software used to create and manage websites easily
+Examples: WordPress, Joomla, Drupal
+
+💻 2. What is a Web Client?
+Definition
+A web client is a software application that allows users to request, receive, and display web pages from a web server.
+Common Web Clients (Browsers)
+Google Chrome
+Mozilla Firefox
+Microsoft Edge
+safari
+Opera
+
+Role of a Web Client
+Sends requests to the web server
+Receives HTML, CSS, and JavaScript
+Displays content visually to the user
+
+🌍 3. What is a Web Application?
+Definition
+A web application is a software application that runs on a web server and is accessed through a web browser.
+Difference from a Website
+Websites mainly show information
+Web applications allow user interaction and processing
+
+Examples
+Email services (Gmail, Outlook)
+Social media (Facebook, Instagram)
+
+Online banking
+E-commerce websites (Amazon)
+
+📄 4. Difference Between Static and Dynamic Web Pages
+Feature	Static Web Page	Dynamic Web Page
+Content	Same for all users	Changes for users
+Technologies	HTML, CSS	HTML, CSS, JS + Backend
+Database	Not required	Required
+Speed	Faster	Slightly slower
+User Interaction	Very limited	Highly interactive
+Examples	Portfolio, brochure site	Social media, e-commerce
+
+Simple Explanation
+Static Page: Ready-made content (like a printed poster)
+Dynamic Page: Content generated on demand (like a live TV show)
+
+🧩 Frontend vs Backend
+Frontend (Client Side)
+What users see and interact with
+
+Technologies:
+HTML
+CSS
+JavaScript
+
+Backend (Server Side)
+Works behind the scenes
+Handles data, logic, authentication
+Technologies:
+
+Python, Java, PHP, Node.js
+Databases: MySQL, MongoDB, SQL
+
+Backend Frameworks
+Django
+Flask
+
+🧱 5. What is HTML?
+Definition
+HTML (HyperText Markup Language) is used to create and structure web pages.
+
+Key Points
+HTML is not a programming language
+It is a markup language
+Uses tags to define content
+
+🏷️ 6. HTML Tags
+What are HTML Tags?
+Keywords surrounded by angle brackets
+Example: <html>
+Types of Tags
+Paired Tags:
+<p> </p>, <h1> </h1>
+
+Opening Tag: <p>
+Closing Tag: </p>
+
+📄 7. HTML Document Structure
+An HTML document is also called a web page.
+Basic HTML Example
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+<body>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</body>
+</html>
+
+🧠 Example Explained
+<html> → Defines the whole web page
+<head> → Contains meta information (title, styles)
+<title> → Page title shown on browser tab
+<body> → Visible content
+<h1> → Heading
+<p> → Paragraph
+
+✍️ 8. Editing HTML
+HTML Editors
+Dreamweaver
+Visual Studio Code
+Best for Beginners
+Notepad / Notepad++
+Helps students understand raw HTML clearly
+
+📁 9. HTML File Extension
+.html
+.htm
+
+👉 No difference between them
+👉 Either extension can be used
