@@ -1,0 +1,128 @@
+      CREATE TABLE EMP_INFO (
+        EMP_ID INT PRIMARY KEY,
+        NAME VARCHAR(50),
+        SAL INT,
+        JDATE DATE,
+        EMAIL VARCHAR(100),
+        ADDRESS VARCHAR(255)
+    );
+
+    INSERT INTO EMP_INFO (EMP_ID, NAME, SAL, JDATE, EMAIL, ADDRESS) VALUES
+    (1, 'Suresh', 26000, '2019-01-26', NULL, NULL),
+    (2, 'Ankita', 50000, '2019-08-16', 'ankita@email.com', 'Delhi'),
+    (3, 'Rahul', 60000, '2020-05-10', 'rahul@email.com', 'Mumbai'),
+    (4, 'Sunita', 40000, '2018-03-12', NULL, 'Pune'),
+    (5, 'Pooja', 25000, '2021-11-25', 'pooja@email.com', NULL),
+    (6, 'Pranika', 75000, '2019-10-05', NULL, 'Hyderabad'),
+    (7, 'Surya', 55000, '2020-07-20', 'surya@email.com', 'Chennai'),
+    (8, 'Suman', 15000, '2022-01-15', 'suman@email.com', NULL),
+    (9, 'Ritika', 9999, '2017-09-19', NULL, NULL),
+    (10, 'Rohit', 30000, '2020-03-01', 'rohit@email.com', 'Bangalore');
+    
+Between and Not Betweeen Operator:
+    The between operator is used to retrieve the value from a specific range.
+
+    Syntax:
+        SELECT <col_1>,<col_2> FROM <table_name> WHERE col BETWEEN start_value AND stop_value;
+    Ex:
+        Select * from Emp_info where SAL between 20000 and 40000;
+        Select * from Emp_info where SAL>=20000 and SAL<=40000;
+
+    Q. Display all the employee names of those who are getting salaries between 25,000 and 50,000.
+    SELECT * from EMP_INFO where SAL between 25000 and 50000.
+
+    Q. Employee names, salaries with min 25000 and maximum 60000.(but 60000 is not included.)
+    SELECT NAME,SAL from EMP_INFO where SAL BETWEEN 25000 AND 59999;
+
+    Q. All the Employees details those who joined in the year 2019.
+    SELECT * from EMP_INFO where JDATE between '2019-01-01' AND '2019-12-31';
+
+    Q. All the Employees details those who have not joined in the year 2019.
+    SELECT * from EMP_INFO where JDATE NOT BETWEEN '2019-01-01' AND '2019-12-31';
+
+IN and NOT IN Operator:
+    The IN Operator is used to support a specific list of values.
+
+    Syntax:
+        SELECT <Col_1>,<Col_2> from <table_name> where IN(value1, value2);
+
+    Q. Employee details those who joined on 26-jan-2019 or 16-Aug-2019.
+    (with logical or)-- SELECT * from Emp_info where (JDATE='2019-01-26' OR JDATE='2019-08-16');
+    SELECT * from Emp_info where JDATE IN('2019-01-26','2019-08-16');
+
+    Q. Employees details those who not joined on 26-jan-2019 or 16-Aug-2019.
+    SELECT * from Emp_info where JDATE NOT IN('2019-01-26','2019-08-16');
+
+    Q. Employees details those who are getting salaries either 25000 or 50000 or 75000.
+    SELECT * from EMP_INFO where SAL IN(25000,50000,75000);
+
+LIKE and NOT LIKE Operators:
+    The like operator is used to search for specified patterns within column values.
+    The like operator is used along with the WHERE clause.
+    Searching for character is known as a pattern.
+
+    The like operator uses two symbols to search for patterns.
+    i. Underscore(start_value)--> represents any one character.
+    ii. Percentile(%)--> represent zero or any number of character.
+    These 2 special symbols are called as wildcard characters.
+
+    Q. all  employees details who are getting 4-digit salaries.
+    select * from EMP_INFO where sal like '____';
+
+    Q. all  employees details who are not  getting 4-digit salaries.
+    select * from EMP_INFO where sal not like '____';
+
+    Q. all employees details whose salary starts with 5.
+    select * from EMP_INFO where sal like '5%';
+
+    Q. all employees details whose name starts with 's'.
+    select * from EMP_INFO where name like 's%';
+
+    Q. all employees details whose name ends with 'a'.
+    select * from EMP_INFO where name like '%a';
+
+    Q. all employees details whose name end with 'nka'.
+    select * from EMP_INFO where name like '%nka';
+
+    Q. all employees details whose name starts with 'P' and ends with 'a'
+    select * from EMP_INFO where name like 'P%a';
+
+    Q. all employees details name contain a letter 'u' in between the first and last characters.
+    select * from EMP_INFO name k=like '%u%';
+
+    Q. all employees names have 8 characters, and the second character should be 'u'.
+    select * from EMP_INFO where name like '_u______';
+
+    Q. all employees details whose join in the year 2020.
+    select * from EMP_INFO JDATE like '2020%';
+
+    Q. all employees details whose name starts with S and exactly 4 characters long.
+    select * from EMP_INFO where name like 's___';
+
+IS NULL and IS NOT NULL operator:
+    IS NULL operator is used to check NULL value in a specific column.
+    NULL value means missing value.
+    NULL value is not equals to zero.
+
+    Syntax: 
+        SELECT <col_1>,<col_2> form <table_name> where col is NULL.
+
+    Q. all employees details whose email if IS NULL.
+    select * from EMPLOYEE where EMAIL IS NULL;
+
+    Q. all employees details whose email and address IS NULL.
+    select * from EMPLOYEE where Email IS NULL and ADDRESS IS NULL.
+
+    Q. all employees details whose email IS NOT NULL.
+    select * form EMPLOYEE where EMAIL IS NOT NULL;
+
+
+
+
+
+
+
+
+
+
+    

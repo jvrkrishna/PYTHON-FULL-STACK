@@ -1,0 +1,30 @@
+#IN PARAMETER:
+    The IN parameter is used to pass data into the stored procedure.
+    Once inside the procedure or function, the value of the IN parameter cannot be modified.
+    In MySQL, when you define a parameter in a stored procedure without specifying the direction (IN, OUT, or INOUT), the default is IN.
+    The IN parameter is read-only. You can use it to refer to the value that was passed in, but you cannot modify it inside the procedure.
+    It's primarily used for passing values that you need to use for queries, conditions, or calculations within the procedure.
+
+
+🔹 Step 4: Create Procedure with an IN Parameter
+DELIMITER $$
+
+CREATE PROCEDURE get_Stu_by_salary(IN min_salary INT)
+BEGIN
+    SELECT * FROM EMP_INFO WHERE SALARY >= min_salary;
+END $$
+
+DELIMITER ;
+
+🔸 Now call it like this:
+    CALL get_Stu_by_salary(8500);
+🟢 Returns all employees with salary >= 8500
+
+🔹 Step 5: Drop a Procedure
+    DROP PROCEDURE IF EXISTS get_Stu_info;
+    DROP PROCEDURE IF EXISTS get_Stu_by_salary;
+
+📝 Notes:
+    IN – sends a value into the procedure
+    OUT – returns a value from the procedure
+    INOUT – sends a value into and gets back an updated value

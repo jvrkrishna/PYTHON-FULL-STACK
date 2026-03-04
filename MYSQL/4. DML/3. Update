@@ -1,0 +1,74 @@
+📝 UPDATE Statement in MySQL
+The UPDATE command is used to modify existing records in a table. You can update one or multiple columns in a single query.
+
+✅ Update a Single Column
+Syntax:
+    UPDATE <table_name>
+    SET column_name = new_value
+    WHERE condition;
+
+Example:
+    UPDATE stud_info
+    SET COURSE = 'MCA'
+    WHERE id = 1;
+
+✅ Update Multiple Columns
+Syntax:
+    UPDATE <table_name>
+    SET column_name1 = new_value1,
+        column_name2 = new_value2
+    WHERE condition;
+
+Example:
+    UPDATE stud_info
+    SET COURSE = 'MCA',
+        NAME = 'RAMA'
+    WHERE id = 1;
+
+💻 Practical Example
+🛠️ Create and View Table
+    CREATE TABLE EMP_INFO (
+        ID INT,
+        NAME VARCHAR(20),
+        JDATE DATE,
+        SALARY FLOAT
+    );
+
+    DESC EMP_INFO;
+
+📥 Insert Sample Records
+    INSERT INTO EMP_INFO VALUES
+    (1, 'Ram', '2019-10-22', 25000),
+    (2, 'Raju', '2020-08-12', 15500),
+    (3, 'Ravi', '2018-07-28', 28000),
+    (4, 'Rahul', '2018-02-21', 75000);
+
+    SELECT * FROM EMP_INFO;
+
+❓ Queries
+🔸 Q1: Add 3300 to all employee salaries
+    SET SQL_SAFE_UPDATES = 0; -- (Optional: disables safe update mode)
+    UPDATE EMP_INFO SET SALARY = SALARY + 3300;
+
+    SELECT * FROM EMP_INFO;
+
+🔸 Q2: Update Raju's salary to 23000
+    UPDATE EMP_INFO
+    SET SALARY = 23000
+    WHERE NAME = 'Raju';
+
+    SELECT * FROM EMP_INFO;
+
+🔸 Q3: Add 1500 to salary of employee who joined on 2020-08-12
+    UPDATE EMP_INFO
+    SET SALARY = SALARY + 1500
+    WHERE JDATE = '2020-08-12';
+
+    SELECT * FROM EMP_INFO;
+
+🔸 Q4: Add 2100 to salaries of employees earning less than 27000
+    UPDATE EMP_INFO
+    SET SALARY = SALARY + 2100
+    WHERE SALARY < 27000;
+
+    SELECT * FROM EMP_INFO;

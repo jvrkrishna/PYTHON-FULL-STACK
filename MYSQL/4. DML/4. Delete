@@ -1,0 +1,83 @@
+🗑️ DELETE Statement in MySQL
+The DELETE command is used to remove records from a table.
+You can delete specific rows using a WHERE clause or delete all rows by omitting it.
+
+✅ Syntax:
+    DELETE FROM <table_name> WHERE condition;
+
+If you omit the WHERE clause, all rows in the table will be deleted:
+    DELETE FROM <table_name>;
+
+🧪 Practical Example
+🛠️ Create Table:
+    CREATE TABLE EMP_INFO (
+        ID INT,
+        NAME VARCHAR(20),
+        JDATE DATE,
+        SALARY FLOAT
+    );
+
+    DESC EMP_INFO;
+
+📥 Insert Data:
+    INSERT INTO EMP_INFO VALUES
+    (1, 'Ram',  '2019-10-22', 25000),
+    (2, 'Raju', '2020-08-12',  8900),
+    (3, 'Ravi', '2018-07-28', 28000),
+    (4, 'Rahul','2018-02-21', 75000),
+    (5, 'Raghu','2018-03-21', 61000);
+
+    SELECT * FROM EMP_INFO;
+
+❓ DELETE Queries
+🔸 Q1: Delete employees with salaries below 10,000
+        DELETE FROM EMP_INFO WHERE SALARY < 10000;
+
+        SELECT * FROM EMP_INFO;
+
+🔸 Q2: Delete employees with salaries between 60,000 and 76,000
+    DELETE FROM EMP_INFO WHERE SALARY > 60000 AND SALARY < 76000;
+
+    SELECT * FROM EMP_INFO;
+
+🔸 Q3: Delete the employee named 'Ram'
+    DELETE FROM EMP_INFO WHERE NAME = 'Ram';
+
+    SELECT * FROM EMP_INFO;
+
+🔸 Q4: Delete Duplicate Records (Advanced)
+    Assuming EMP_INFO had duplicate names and IDs (not a real case with proper primary keys), use:
+
+    DELETE e1
+    FROM EMP_INFO e1, EMP_INFO e2
+    WHERE e1.NAME = e2.NAME
+    AND e1.ID > e2.ID;
+
+⚠️ This is a self-join technique used when no PRIMARY KEY or UNIQUE constraint is defined. Prefer using constraints to prevent duplicates.
+
+🔸 Q5: Delete all records from the table
+    DELETE FROM EMP_INFO;
+
+    -- or
+    TRUNCATE TABLE EMP_INFO;
+
+
+🔍 DELETE     vs      TRUNCATE
+
+Feature	               DELETE	                         TRUNCATE
+Uses WHERE clause?	   ✅ Yes	                        ❌ No
+Rollback possible?	   ✅ Yes (if inside a transaction)	❌ No    
+                                                        (auto-committed)
+Affects Triggers?	   ✅ Yes	                        ❌ No
+Resets Auto-Increment? ❌ No	                            ✅ Yes
+Speed (large tables)   🐢 Slower (row-by-row)	         🚀 Faster
+
+🧠 Conclusion:
+Use DELETE when:
+    . You need row-level control (via WHERE).
+    . You may want to rollback later.
+    . You need to fire triggers on delete.
+
+Use TRUNCATE when:
+    . You want to quickly remove all rows.
+    . You don’t need rollback or row-level logic.

@@ -1,0 +1,11 @@
+This function is used to get the average value of the numeric column.
+Syntax:
+    select avg(column_name) from <table_name>;
+Ex:
+    select avg(sal) from EMP_INFO;
+
+Practical:
+2️⃣ AVG() – Average of a Column
+SELECT AVG(SALARY) AS Average_Salary FROM EMP_INFO;
+🔸 Returns: 8100
+

@@ -1,0 +1,35 @@
+#Rollback:
+    This command is used to undo the changes made during the current transaction.
+    It rolls back the transaction to its starting point, discarding any modifications made with in the transaction.
+
+    SYNTAX:
+    Rollback;
+
+    Q. How to Rollback a query in MYSQL?
+    #Run the below command to start transaction. Without starting transaction we cannot rollback.
+    BEGIN;
+
+    #Update something to check the rollback.
+    update emp set salary =5000 where id=101;
+    select * from emp;
+
+    #To rollback
+    rollback;
+
+******************************************************************************************
+#Start the transaction
+Start transaction;
+
+#Perform some sql operation
+INSERT INTO employee(NAME,DEPT) values("Ram","trainer");
+UPDATE employee SET department="HR" where Name="Ram";
+
+#If everything is correct, wether commit the transaction
+COMMIT;
+
+or
+
+#If there is an error, rollback the transaction.
+ROLLBACK;
+******************************************************************************************
+

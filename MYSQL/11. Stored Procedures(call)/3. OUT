@@ -1,0 +1,37 @@
+#OUT PARAMETER:
+    An OUT parameter in MySQL is used to return a value from a stored procedure to the caller. Unlike IN parameters, which are used to pass values into the stored procedure, OUT parameters are used to send values out of the procedure.
+    Unlike IN parameters, OUT parameters can be modified within the stored procedure. The value of an OUT parameter is set or updated by the procedure and is available to the caller once the procedure finishes executing.
+    OUT parameters do not need to be initialized before calling the procedure. They are set by the procedure itself.
+    You can use multiple OUT parameters to return several values from a procedure. This allows you to send multiple results back to the calling program.
+
+Example:
+    DELIMITER $$
+
+    CREATE PROCEDURE get_total_employees(OUT total INT)
+    BEGIN
+        SELECT COUNT(*) INTO total FROM EMP_INFO;
+    END $$
+
+    DELIMITER ;
+
+🔍 What it does:
+    Creates a procedure named get_total_employees
+    It has one OUT parameter: total
+    It counts the number of rows (employees) in the EMP_INFO table
+    It stores that count into the total parameter
+
+▶️ How to call it:
+    CALL get_total_employees(@emp_count);
+🔹 This runs the procedure and stores the result in the session variable @emp_count.
+
+📊 Get the result:
+SELECT @emp_count AS Total_Employees;
+
+🧾 Sample Output:
+    Total_Employees
+    3
+
+⚠️ This output depends on how many records are actually present in your EMP_INFO table.
+
+
+

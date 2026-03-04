@@ -1,0 +1,30 @@
+#COMMIT:
+    This command is used to permanently save the changes made during the current transaction.
+    Once a transaction is committed, its changes are made permanent and cannot be rolled back.
+
+    #If we no need to rollback (commit to save changes without rollback)
+    commit;
+
+    
+#Auto commit mode
+    As we know By default all DDL command are auto committed.
+    By default, many databases operate in auto commit mode, where each individual SQL statements is automatically committed.
+    In auto commit mode each SQL statement is transaction.
+    To execute multiple statements as single transaction, we must explicitly start the transaction.
+
+    START TRANSACTION;
+    BEGIN;
+
+#TO disable Auto commit mode:
+    SET autocommit=0;
+
+        or
+    SET autocommit OFF;
+
+#TO enable Auto commit mode:
+    SET autocommit=1;
+
+        or
+    SET autocommit ON;
+
+#### We cannot disable auto commit mode of DDL commands.

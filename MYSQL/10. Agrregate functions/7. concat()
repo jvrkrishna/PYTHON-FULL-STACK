@@ -1,0 +1,26 @@
+This functions is used to concat the columns.
+Syntax:
+    select concat(column_name1, column_name2) from <tablename>;
+Ex:
+    select concat(first_name," ",last_name) as full_name from EMP_INFO;
+    
+6️⃣ CONCAT() – Combine Column Values
+This is not a pure aggregate function, but you can use it in queries like:
+SELECT CONCAT(NAME, ' - ', DEPT) AS Employee_Info FROM EMP_INFO;
+🔸 Output:
+    Ravi - HR
+    Anita - IT
+    Suman - Finance
+    .....
+
+If you want to concatenate values across multiple rows (not standard in all databases), you can use:
+
+GROUP_CONCAT() in MySQL:
+SELECT GROUP_CONCAT(NAME) AS All_Names FROM EMP_INFO;
+
+📘 Example with GROUP BY
+SELECT DEPT, COUNT(*) AS Count, AVG(SALARY) AS Avg_Salary
+FROM EMP_INFO
+GROUP BY DEPT;
+
+🔸 Returns row-wise stats per department.
