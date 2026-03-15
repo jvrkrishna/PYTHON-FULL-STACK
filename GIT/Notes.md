@@ -30,10 +30,10 @@ What is GitHub?
 GitHub is an online platform that hosts Git repositories.
 
 Difference:
-Git	                    GitHub
-Version control tool	Cloud platform
-Works locally	        Stores projects online
-Tracks file changes	    Hosts repositories
+Git	                     GitHub
+Version control tool	 Cloud platform
+Works locally	         Stores projects online
+Tracks file changes	     Hosts repositories
 
 GitHub is the largest source code hosting platform and has been owned by Microsoft since 2018.
 
