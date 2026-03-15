@@ -20,10 +20,10 @@ More than 70% of developers use Git because it allows:
 GitHub is a cloud platform that hosts Git repositories.
 
 Difference:
-Git	                  GitHub
-Version control tool	   Online platform
-Works locally	         Works on cloud
-Tracks changes	         Stores repositories
+Git	                      GitHub
+Version control tool	  Online platform
+Works locally	          Works on cloud
+Tracks changes	          Stores repositories
 
 GitHub is the largest source code hosting platform and is owned by Microsoft (since 2018).
 
