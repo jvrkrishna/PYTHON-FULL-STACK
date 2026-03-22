@@ -2,31 +2,30 @@
 ## Topic: Connect Django with MySQL Database
 
 **Objective**
-This project focuses on:
-- Connecting Django with MySQL
-- Replacing SQLite with MySQL
-- Running migrations on MySQL
+This project focuses on connecting a Django project with MySQL database.
 
 ---
-# Step 1 — Install MySQL
-Install MySQL Server:
-👉 Download from official site  
-👉 Install and set username & password  
+# Step 1 — Create Django Project
+```bash
+django-admin startproject Project
+cd Project
+```
 
 ---
-# Step 2 — Install MySQL Client Library
+# Step 2 — Install MySQL Driver
 ```bash
 pip install mysqlclient
 ```
 
 ---
-# If Error Occurs (Alternative)
+# Alternative (If Error)
 ```bash
 pip install PyMySQL
 ```
 
-Then add in project:
-📄 project/__init__.py
+---
+# If using PyMySQL
+📄 Project/__init__.py
 ```python
 import pymysql
 pymysql.install_as_MySQLdb()
@@ -34,14 +33,14 @@ pymysql.install_as_MySQLdb()
 
 ---
 # Step 3 — Create Database in MySQL
-Login to MySQL:
 ```sql
 CREATE DATABASE mydb;
 ```
 
 ---
 # Step 4 — Configure settings.py
-📄 project/settings.py
+📄 Project/settings.py
+
 ```python
 DATABASES = {
     'default': {
@@ -56,7 +55,7 @@ DATABASES = {
 ```
 
 ---
-# Step 5 — Run Migrations
+# Step 5 — Apply Migrations
 ```bash
 python manage.py makemigrations
 python manage.py migrate
@@ -75,8 +74,7 @@ python manage.py runserver
 ```
 
 ---
-# Step 8 — Verify Tables in MySQL
-Open MySQL:
+# Step 8 — Verify in MySQL
 ```sql
 USE mydb;
 SHOW TABLES;
@@ -84,7 +82,7 @@ SHOW TABLES;
 
 ---
 # Output
-You will see tables like:
+Tables created:
 - auth_user
 - django_admin_log
 - django_session
@@ -92,40 +90,17 @@ You will see tables like:
 ---
 # Flow
 ```
-Django Models → ORM → MySQL Database
+Django → ORM → MySQL Database
 ```
 
 ---
-# Important Concepts
-## Engine
-```python
-'django.db.backends.mysql'
-```
-
----
-## Default Port
-```
-3306
-```
-
----
-# Common Errors & Fix
-## Error: mysqlclient install failed
-✔ Install:
-```bash
-pip install PyMySQL
-```
-
----
-## Error: Access denied
-✔ Check:
-- username
-- password
-- database name
+# Important Notes
+- Port → 3306  
+- ENGINE → mysql backend  
+- Database must exist before migration  
 
 ---
 # Concepts Covered
-- MySQL Setup
+- MySQL Integration
 - Database Configuration
 - Django ORM with MySQL
-- Production-level database usage
