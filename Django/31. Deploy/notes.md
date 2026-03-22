@@ -1,5 +1,5 @@
 ## Project No: 0026
-## Topic: Deploy Django Project (with Explanation)
+## Topic: Deploy Django Project
 
 ---
 # Step 1 — Create Project
