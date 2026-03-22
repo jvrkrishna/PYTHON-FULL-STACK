@@ -108,14 +108,14 @@ Django → ORM → MySQL Database
 🔥 Important Understanding
 Default = SQLite  
 Production = MySQL / PostgreSQL
+
 🚀 When to Use MySQL?
 Large applications
 Multi-user systems
 Production deployment
+
 ⚡ Pro Tip (Interview)
-
 👉 Why not SQLite?
-
 Not scalable
 File-based
 Limited concurrency
