@@ -1,0 +1,228 @@
+## Project No: 0021
+## Project Name: authproject
+
+**Objective**
+This project focuses on:
+- User Registration
+- Login System
+- Logout System
+- Authentication using Django built-in forms
+
+---
+# Step 1 — Create Project
+```bash
+django-admin startproject authproject
+cd authproject
+```
+
+---
+# Step 2 — Create App
+```bash
+python manage.py startapp accounts
+```
+
+---
+# Step 3 — Register App
+📄 authproject/settings.py
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.sessions',
+    'accounts',
+]
+```
+
+---
+# Step 4 — Create Forms
+📄 accounts/forms.py
+```python
+from django.contrib.auth.forms import UserCreationForm
+
+class RegisterForm(UserCreationForm):
+    pass
+```
+
+---
+# Step 5 — Create Views
+📄 accounts/views.py
+```python
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, logout
+from .forms import RegisterForm
+
+# Register
+def register_view(request):
+
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = RegisterForm()
+
+    return render(request, 'register.html', {'form': form})
+
+
+# Logout
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+```
+
+---
+# Step 6 — Login View (Built-in)
+📄 accounts/views.py (add)
+```python
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate, login
+
+def login_view(request):
+
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'login.html', {'form': form})
+```
+
+---
+# Step 7 — Create URLs
+📄 accounts/urls.py
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('register/', views.register_view, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+]
+```
+
+---
+📄 authproject/urls.py
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('accounts.urls')),
+]
+```
+
+---
+# Step 8 — Create Templates
+📁 accounts/templates/
+
+---
+## register.html
+```html
+<h2>Register</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+
+<a href="{% url 'login' %}">Login</a>
+```
+
+---
+## login.html
+```html
+<h2>Login</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+
+<a href="{% url 'register' %}">Register</a>
+```
+
+---
+# Step 9 — Create Home Page
+📄 accounts/views.py
+```python
+def home(request):
+    return render(request, 'home.html')
+```
+
+---
+📄 accounts/urls.py (add)
+```python
+path('', views.home, name='home'),
+```
+
+---
+## home.html
+```html
+<h1>Welcome {{ request.user }}</h1>
+
+<a href="{% url 'logout' %}">Logout</a>
+```
+
+---
+# Step 10 — Apply Migrations
+```bash
+python manage.py migrate
+```
+
+---
+# Step 11 — Run Server
+```bash
+python manage.py runserver
+```
+
+---
+# Output URLs
+```
+Register → /register/
+Login → /login/
+Home → /
+Logout → /logout/
+```
+
+---
+# Authentication Flow
+```
+Register → Login → Session Created → Access Pages → Logout
+```
+
+---
+# Important Concepts
+## Login User
+```python
+login(request, user)
+```
+
+## Logout User
+```python
+logout(request)
+```
+
+## Check Logged-in User
+```html
+{{ request.user }}
+```
+
+---
+# Concepts Covered
+- UserCreationForm
+- AuthenticationForm
+- Login / Logout
+- Sessions
+- User Authentication System
