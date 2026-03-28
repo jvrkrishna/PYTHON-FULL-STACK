@@ -1,83 +1,68 @@
 ## Project No: 0015
-## Project Name: project
+## Project Name: AdvancedDTLProject
 
 **Objective**
-This project focuses on understanding **Django Template Language (DTL)** including:
+This project focuses on:
+- Template Filters
+- include tag
+- with tag
+- csrf_token
 - Template Inheritance
-- Template Tags (`{% %}`)
-- Template Variables (`{{ }}`)
-- Navigation using `{% url %}`
+- Template Variables & Tags
 
 ---
-# Step 1 — Install Django
+# Step 1 — Create Project
 ```bash
-pip install Django
+django-admin startproject AdvancedDTLProject
+cd AdvancedDTLProject
 ```
-
 ---
-# Step 2 — Create Project
+# Step 2 — Create App
 ```bash
-django-admin startproject project
-cd project
+python manage.py startapp app1
 ```
-
 ---
-# Step 3 — Create Templates & Static Folder
+# Step 3 — Register App
+📄 AdvancedDTLProject/settings.py
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.staticfiles',
+    'app1',
+]
+```
+---
+# Step 4 — Create Templates Folder
 ```bash
 mkdir templates
-mkdir static
 ```
-
 ---
-# Step 4 — Configure settings.py
-📄 project/settings.py
-
+# Step 5 — Configure Templates
+📄 settings.py
 ```python
 import os
-
 TEMPLATES = [
     {
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
     },
 ]
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 ```
-
 ---
-# Step 5 — Create Base Template
+# Step 6 — Create Base Template
 📄 templates/base.html
-
 ```html
-{% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{% block title %}My Site{% endblock %}</title>
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+    <title>{% block title %}My Site{% endblock %}</title>
 </head>
-
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'base' %}">HIE TECH SOLUTIONS</a>
-    </div>
-
-    <ul class="nav navbar-nav">
-      <li><a href="{% url 'home' %}">Home</a></li>
-      <li><a href="{% url 'p1' %}">Page 1</a></li>
-    </ul>
-
-  </div>
+<nav>
+    <a href="{% url 'home' %}">Home</a>
 </nav>
+
+<hr>
 
 {% block content %}
 {% endblock %}
@@ -85,174 +70,143 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 </body>
 </html>
 ```
-
 ---
-# Step 6 — Create Project View
-📄 project/views.py
-
-```python
-from django.shortcuts import render
-
-def sample(request):
-    return render(request, "base.html")
+# Step 7 — Create Header (include)
+📄 templates/header.html
+```html
+<h1>My Website Header</h1>
+<hr>
 ```
-
 ---
-# Step 7 — Configure Project URLs
-📄 project/urls.py
-```python
-from django.contrib import admin
-from django.urls import path, include
-from .views import sample
+# Step 8 — Create Main Template
+📄 templates/at1.html
+```html
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% include "header.html" %}
+<h2>Hello {{ name|upper }}</h2>
+<p>Default Name: {{ name|default:"Guest" }}</p>
+<ul>
+{% for m in marks %}
+    <li>{{ m }}</li>
+{% endfor %}
+</ul>
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', sample, name="base"),
-    path('', include("app1.urls")),
-]
+{% with total=marks|length %}
+    <p>Total Subjects: {{ total }}</p>
+{% endwith %}
+
+{% if status %}
+    <p>Status: Active</p>
+{% else %}
+    <p>Status: Inactive</p>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
 ```
-
 ---
-# Step 8 — Create App
-```bash
-python manage.py startapp app1
-```
-
----
-# Step 9 — Register App
-📄 project/settings.py
-
-```python
-INSTALLED_APPS = [
-    'django.contrib.staticfiles',
-    'app1',
-]
-```
-
----
-# Step 10 — Create App Views
+# Step 9 — Create View
 📄 app1/views.py
-
 ```python
 from django.shortcuts import render
 
 def home(request):
-    return render(request, "at1.html")
 
-def page1(request):
-    return render(request, "at2.html")
+    data = {
+        'name': 'John',
+        'marks': [80, 90, 70],
+        'status': True
+    }
+
+    return render(request, 'at1.html', data)
 ```
-
 ---
-# Step 11 — App URLs
+# Step 10 — Create App URLs
 📄 app1/urls.py
-
 ```python
 from django.urls import path
-from .views import home, page1
-
+from .views import home
 urlpatterns = [
-    path('home/', home, name="home"),
-    path('page1/', page1, name="p1"),
+    path('', home, name='home'),
 ]
 ```
-
 ---
-# Step 12 — Create Templates
-📄 templates/at1.html
+# Step 11 — Connect App URLs
+📄 AdvancedDTLProject/urls.py
+```python
+from django.contrib import admin
+from django.urls import path, include
 
-```html
-{% extends "base.html" %}
-
-{% block content %}
-<b>Hello This is Home Page</b>
-{% endblock %}
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('app1.urls')),
+]
 ```
-
 ---
-
-📄 templates/at2.html
-
-```html
-{% extends "base.html" %}
-
-{% block content %}
-<b>Hello This is Page1</b>
-{% endblock %}
-```
-
----
-# Step 13 — Run Server
+# Step 12 — Run Server
 ```bash
 python manage.py runserver
 ```
-
 ---
 # Output
 ```
 http://127.0.0.1:8000/
 ```
-
-- Navbar displayed
-- Navigation working
-- Template inheritance working
+---
+# Output Features
+- Name shown in uppercase ✅
+- Default value applied ✅
+- Loop displayed ✅
+- Count shown using with ✅
+- Condition working ✅
+- Header reused (include) ✅
+- Form secured with csrf_token ✅
 
 ---
-# Django Template Language (DTL) Concepts
-## 1. Template Inheritance
+# Advanced DTL Concepts
+## Filters
+```html
+{{ name|upper }}
+{{ marks|length }}
+{{ name|default:"Guest" }}
+```
+---
+## include
+```html
+{% include "header.html" %}
+```
+---
+## with
+```html
+{% with total=marks|length %}
+{% endwith %}
+```
+---
+## csrf_token
+```html
+{% csrf_token %}
+```
+---
+## Template Inheritance
 ```html
 {% extends "base.html" %}
 ```
-
-- Reuse layout (navbar, footer)
-
 ---
-## 2. Blocks
-```html
-{% block content %}
-{% endblock %}
-```
-
-- Replace content in child templates
-
----
-## 3. Template Variables
-```html
-{{ name }}
-```
-
-- Display dynamic data
-
----
-## 4. Template Tags
-```html
-{% url 'home' %}
-{% load static %}
-```
-
-- Logic inside templates
-
----
-## 5. Navigation
-```html
-<a href="{% url 'home' %}">
-```
-
-- Dynamic URL linking
-
----
-
 # Flow
-
 ```
-View → Template → Base Template → Response
+View → Data → Template → Filters → Output
 ```
-
 ---
 # Concepts Covered
 - Template Inheritance
-- Blocks
-- URL Tag
-- Static Tag
-- Reusable Layout
-- Navigation System
+- Filters
+- include
+- with
+- csrf_token
+- Dynamic Rendering
