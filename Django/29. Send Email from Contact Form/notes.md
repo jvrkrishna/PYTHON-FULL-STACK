@@ -64,7 +64,7 @@ def contactus(request):
             subject,
             message_body,
             settings.EMAIL_HOST_USER,
-            ['receiver_email@gmail.com'],
+            [email],
             fail_silently=False,
         )
 
