@@ -54,7 +54,7 @@ Add:
     <form method="POST">
         {% csrf_token %}
         
-        Student Name: <input type="number" name="name"><br>
+        Student Name: <input type="text" name="name"><br>
         Course: <input type="text" name="course"><br>
         Grade: <input type="text" name="grade"><br>
         Issued By: <input type="text" name="issued_by"><br>
